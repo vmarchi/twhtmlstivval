@@ -13,6 +13,8 @@
                     .click(function( event ) {
                         event.preventDefault();
                     });
+            //$( "input[type=date]")
+              //      .datepicker()
         });
     </script>
 </head>
@@ -58,6 +60,10 @@
             <select id="subtype"></select>
             <label for="radius">Raggio</label>
             <input type="text" id="radius" placeholder="Raggio (km)">
+            <label for="dateStart">Data Inizio</label>
+            <input id="dateStart" type="date">
+            <label for="dateEnd">Data Fine</label>
+            <input id="dateEnd" type="date">
             <button type="reset">Cancella</button>
             <button type="submit">Cerca</button>
         </form>
