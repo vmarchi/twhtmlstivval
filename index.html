@@ -6,6 +6,7 @@
     <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
     <script src="lib/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
     <link rel="stylesheet" href="style/jquery-ui-1.10.3.custom.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
     <script>
         $(function() {
             $( "button" )
@@ -17,10 +18,61 @@
                     .datepicker()
         });
     </script>
+    <script>
+        $(function() {
+            // run the currently selected effect
+            function runEffect() {
+                // get effect type from
+                var selectedEffect = "blind";
+                // most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if ( selectedEffect === "scale" ) {
+                    options = { percent: 0 };
+                } else if ( selectedEffect === "size" ) {
+                    options = { to: { width: 200, height: 60 } };
+                }
+                // run the effect
+                $( "#effectLogin" ).toggle( selectedEffect, options, 500 );
+            };
+
+            // set effect from select menu value
+            $( "#loginDropdown" ).click(function() {
+
+                runEffect();
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            // run the currently selected effect
+            function runEffect() {
+                // get effect type from
+                var selectedEffect = "blind";
+                // most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if ( selectedEffect === "scale" ) {
+                    options = { percent: 0 };
+                } else if ( selectedEffect === "size" ) {
+                    options = { to: { width: 200, height: 60 } };
+                }
+                // run the effect
+                $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
+            };
+
+            // set effect from select menu value
+            $( "#searchDropdown" ).click(function() {
+
+                runEffect();
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-
         <!-- Menu -->
         <nav>
             <div id="logo">
@@ -29,47 +81,43 @@
             <div>
                 <ul>
                     <li class="dropdown" id="login">
-                        <a href="#" title="Effettua il Login">Login</a>
-                        <ul>
-                            <li>
+                        <a href="#" title="Effettua il Login" id="loginDropdown">Login</a>
+                        <div class="toggler">
+                            <div class="ui-widget-content ui-corner-all" id="effectLogin">
                                 <!-- Test Form Login -->
-                                <div>
-                                    <form name="login" method="post" id="login_module">
-                                        <label for="username">Username</label>
-                                        <input id="username" type="email" name="username" placeholder="your@mail.com" required>
-                                        <label for="password">Password</label>
-                                        <input id="password" type="password" name="password" placeholder="password" required>
-                                        <button id="loginButton" type="submit">Login</button>
-                                    </form>
-                                </div>
+                                <form name="login" method="post" id="login_module">
+                                    <label for="username">Username</label>
+                                    <input id="username" type="email" name="username" placeholder="your@mail.com" required>
+                                    <label for="password">Password</label>
+                                    <input id="password" type="password" name="password" placeholder="password" required>
+                                    <button id="loginButton" type="submit">Login</button>
+                                </form>
                                 <!-- End Test Form Login-->
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="dropdown" id="search">
-                        <a href="#" title="Cerca Situazioni">Cerca</a>
-                        <ul>
-                            <li>
+                        <a href="#" title="Cerca Situazioni" id="searchDropdown">Cerca</a>
+                        <div class="toggler">
+                            <div class="ui-widget-content ui-corner-all" id="effectSearch">
                                 <!-- Search Form -->
-                                <div>
-                                    <form name="search" method="get" id="search_module">
-                                        <label for="type">Tipologia</label>
-                                        <select id="type"></select>
-                                        <label for="subtype">Sottotipo</label>
-                                        <select id="subtype"></select>
-                                        <label for="radius">Raggio</label>
-                                        <input type="text" id="radius" placeholder="Raggio (km)">
-                                        <label for="dateStart">Data Inizio</label>
-                                        <input id="dateStart" class="date">
-                                        <label for="dateEnd">Data Fine</label>
-                                        <input id="dateEnd" class="date">
-                                        <button type="reset">Cancella</button>
-                                        <button type="submit">Cerca</button>
-                                    </form>
-                                </div>
-                                <!-- Search Form End -->
-                            </li>
-                        </ul>
+                                <form name="search" method="get" id="search_module">
+                                    <label for="type">Tipologia</label>
+                                    <select id="type"></select>
+                                    <label for="subtype">Sottotipo</label>
+                                    <select id="subtype"></select>
+                                    <label for="radius">Raggio</label>
+                                    <input type="text" id="radius" placeholder="Raggio (km)">
+                                    <label for="dateStart">Data Inizio</label>
+                                    <input id="dateStart" class="date">
+                                    <label for="dateEnd">Data Fine</label>
+                                    <input id="dateEnd" class="date">
+                                    <button type="reset">Cancella</button>
+                                    <button type="submit">Cerca</button>
+                                </form>
+                                    <!-- Search Form End -->
+                            </div>
+                        </div>
                     </li>
                     <li class="dropdown" id="create"><a href="#" title="Segnala">Segnala</a></li>
                     <li class="dropdown" id="notification"><a href="#" title="Visualizza Centro Notifiche">Notifiche</a></li>

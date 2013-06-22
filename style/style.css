@@ -1,0 +1,14 @@
+.toggler {
+    width: 500px;
+    height: 200px;
+}
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+#effectSearch,#effectLogin {
+    position: relative;
+    width: 240px;
+    height: 135px;
+    padding: 0.4em;
+}
