@@ -102,10 +102,10 @@
                             <div class="ui-widget-content ui-corner-all" id="effectSearch">
                                 <!-- Search Form -->
                                 <form name="search" method="get" id="search_module">
-                                    <label for="type">Tipologia</label>
-                                    <select id="type"></select>
-                                    <label for="subtype">Sottotipo</label>
-                                    <select id="subtype"></select>
+                                    <label for="SearchType">Tipologia</label>
+                                    <select id="SearchType"></select>
+                                    <label for="SearchSubtype">Sottotipo</label>
+                                    <select id="SearchSubtype"></select>
                                     <label for="radius">Raggio</label>
                                     <input type="text" id="radius" placeholder="Raggio (km)">
                                     <label for="dateStart">Data Inizio</label>
@@ -119,7 +119,25 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown" id="create"><a href="#" title="Segnala">Segnala</a></li>
+                    <li class="dropdown" id="create">
+                        <a href="#" title="Segnala">Segnala</a>
+                        <div class="toggler">
+                            <div class="ui-widget-content ui-corner-all" id="effectReports">
+                                <!-- Report Form -->
+                                <form name="report" method="post" id="report_module">
+                                    <label for="ReporType">Tipologia</label>
+                                    <select id="ReporType"></select>
+                                    <label for="ReportSubtype">Sottotipo</label>
+                                    <select id="ReportSubtype"></select>
+                                    <label for="description">Raggio</label>
+                                    <input type="text" id="description" placeholder="Inserisci una descrizione...">
+                                    <button type="reset">Cancella</button>
+                                    <button type="submit">Cerca</button>
+                                </form>
+                                <!-- Report Form End -->
+                            </div>
+                        </div>
+                    </li>
                     <li class="dropdown" id="notification"><a href="#" title="Visualizza Centro Notifiche">Notifiche</a></li>
                 </ul>
             </div>
