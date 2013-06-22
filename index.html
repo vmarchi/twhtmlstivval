@@ -28,8 +28,49 @@
             </div>
             <div>
                 <ul>
-                    <li class="dropdown" id="login"><a href="#" title="Effettua il Login">Login</a></li>
-                    <li class="dropdown" id="search"><a href="#" title="Cerca Situazioni">Cerca</a></li>
+                    <li class="dropdown" id="login">
+                        <a href="#" title="Effettua il Login">Login</a>
+                        <ul>
+                            <li>
+                                <!-- Test Form Login -->
+                                <div>
+                                    <form name="login" method="post" id="login_module">
+                                        <label for="username">Username</label>
+                                        <input id="username" type="email" name="username" placeholder="your@mail.com" required>
+                                        <label for="password">Password</label>
+                                        <input id="password" type="password" name="password" placeholder="password" required>
+                                        <button id="loginButton" type="submit">Login</button>
+                                    </form>
+                                </div>
+                                <!-- End Test Form Login-->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="search">
+                        <a href="#" title="Cerca Situazioni">Cerca</a>
+                        <ul>
+                            <li>
+                                <!-- Search Form -->
+                                <div>
+                                    <form name="search" method="get" id="search_module">
+                                        <label for="type">Tipologia</label>
+                                        <select id="type"></select>
+                                        <label for="subtype">Sottotipo</label>
+                                        <select id="subtype"></select>
+                                        <label for="radius">Raggio</label>
+                                        <input type="text" id="radius" placeholder="Raggio (km)">
+                                        <label for="dateStart">Data Inizio</label>
+                                        <input id="dateStart" class="date">
+                                        <label for="dateEnd">Data Fine</label>
+                                        <input id="dateEnd" class="date">
+                                        <button type="reset">Cancella</button>
+                                        <button type="submit">Cerca</button>
+                                    </form>
+                                </div>
+                                <!-- Search Form End -->
+                            </li>
+                        </ul>
+                    </li>
                     <li class="dropdown" id="create"><a href="#" title="Segnala">Segnala</a></li>
                     <li class="dropdown" id="notification"><a href="#" title="Visualizza Centro Notifiche">Notifiche</a></li>
                 </ul>
@@ -38,37 +79,6 @@
     </header>
     <!-- Area mappa -->
     <section id="map-canvas"> </section>
-
-    <!-- Test Form Login -->
-    <section>
-        <form name="login" method="post" id="login_module">
-            <label for="username">Username</label>
-            <input id="username" type="email" name="username" placeholder="your@mail.com" required>
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" placeholder="password" required>
-            <button id="loginButton" type="submit">Login</button>
-        </form>
-    </section>
-    <!-- End Test Form Login-->
-
-    <!-- Search Form -->
-    <section>
-        <form name="search" method="get" id="search_module">
-            <label for="type">Tipologia</label>
-            <select id="type"></select>
-            <label for="subtype">Sottotipo</label>
-            <select id="subtype"></select>
-            <label for="radius">Raggio</label>
-            <input type="text" id="radius" placeholder="Raggio (km)">
-            <label for="dateStart">Data Inizio</label>
-            <input id="dateStart" class="date">
-            <label for="dateEnd">Data Fine</label>
-            <input id="dateEnd" class="date">
-            <button type="reset">Cancella</button>
-            <button type="submit">Cerca</button>
-        </form>
-    </section>
-    <!-- Search Form End -->
     <footer>
         <nav>
             <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
