@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <title> </title>
+    <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+    <script src="lib/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style/jquery-ui-1.10.3.custom.css"/>
+    <script>
+        $(function() {
+            $( "button" )
+                    .button()
+                    .click(function( event ) {
+                        event.preventDefault();
+                    });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -28,17 +40,29 @@
     <!-- Test Form Login -->
     <section>
         <form name="login" method="post" id="login_module">
-                <label for="username">Username</label>
-                <input id="username" type="email" name="username" placeholder="your@mail.com" required>
-            <br />
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" placeholder="password" required>
-            <br />
-                    <input id="loginButton" type="submit" value="Login">
+            <label for="username">Username</label>
+            <input id="username" type="email" name="username" placeholder="your@mail.com" required>
+            <label for="password">Password</label>
+            <input id="password" type="password" name="password" placeholder="password" required>
+            <button id="loginButton" type="submit">Login</button>
         </form>
     </section>
     <!-- End Test Form Login-->
 
+    <!-- Search Form -->
+    <section>
+        <form name="search" method="get" id="search_module">
+            <label for="type">Tipologia</label>
+            <select id="type"></select>
+            <label for="subtype">Sottotipo</label>
+            <select id="subtype"></select>
+            <label for="radius">Raggio</label>
+            <input type="text" id="radius" placeholder="Raggio (km)">
+            <button type="reset">Cancella</button>
+            <button type="submit">Cerca</button>
+        </form>
+    </section>
+    <!-- Search Form End -->
     <footer>
         <nav>
             <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
