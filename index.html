@@ -39,7 +39,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $("#effectLogin").toggle( selectedEffect, options, 500 );
+                $("#effectLogin").toggle( selectedEffect, options, 170 );
 
             }
             // set effect from select menu value
@@ -65,7 +65,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
+                $( "#effectSearch" ).toggle( selectedEffect, options, 170 );
             }
             // set effect from select menu value
             $( "#searchDropdown" ).click(function() {
@@ -90,7 +90,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectReports" ).toggle( selectedEffect, options, 500 );
+                $( "#effectReports" ).toggle( selectedEffect, options, 170 );
             }
             // set effect from select menu value
             $( "#reportDropdown" ).click(function() {
@@ -148,7 +148,8 @@
         <div id="menu">
             <ul>
                 <li class="dropdown" id="login">
-                    <a href="#" title="Effettua il Login" id="loginDropdown">Login</a>
+                    <a href="#" title="Effettua il Login" id="loginDropdown">  Login </a>
+                    <!-- div di login -->
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectLogin">
                             <!-- Test Form Login -->
@@ -162,6 +163,7 @@
                             <!-- End Test Form Login-->
                         </div>
                     </div>
+                    <!-- fine div di login -->
                 </li>
                 <li class="dropdown" id="search">
                     <a href="#" title="Cerca Situazioni" id="searchDropdown">Cerca</a>

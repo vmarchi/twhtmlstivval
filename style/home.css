@@ -1,11 +1,27 @@
 body {
-    margin: 0px;
+    margin: 0;
+    background: #e5e5e5;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    color:#141414;
+}
+a:visited
+{
+    text-decoration: none;
+    color:#e5e5e5;
+}
+header nav, footer {
+    background: #141414;
+    width: 100%;
+    background: -moz-linear-gradient(top, #32323a 0%, #141414 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #32323a), color-stop(100%, #141414));
+    background: -webkit-linear-gradient(top, #32323a 0%, #141414 100%);
+    background: -o-linear-gradient(top, #32323a 0%, #141414 100%);
+    background: -ms-linear-gradient(top, #32323a 0%, #141414 100%);
+    background: linear-gradient(to bottom, #32323a 0%, #141414 100%);
 }
 header nav {
-    border: 1px solid;
     display: inline-block;
-    width: 100%;
-    background-color: #6B6B6B;
+    border-bottom: 2px solid #71b00c;
 }
 /* CSS di Prova */
 header nav div:first-child {
@@ -17,9 +33,21 @@ header nav div:first-child {
     float:right;
 }*/
 
+footer {
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #71b00c;
+}
+footer a
+{
+    text-decoration: none;
+    color: #e5e5e5;
+}
 #menu {
     float:right;
-    margin-right: 20px;
+    margin: 20px 20px 0 0;
+    min-width:500px;
+    /* TODO: Controllare min margin left se restringo la finestra */
 }
 
 header nav ul { /* togliere nav*/
@@ -32,9 +60,14 @@ header nav ul li { /* togliere nav*/
     float: left;
     list-style-type: none;
 }
-
+/*
+header nav ul li:hover {
+    border: 1px #e5e5e5 solid;
+    border-radius: 8px;
+}
+*/
 header nav li a {
-    color: #FAFAFA; /* TODO sistemare colore */
+    color: #e5e5e5;
     text-decoration: none;
     margin: 20px;
     font-weight: bold;
@@ -49,4 +82,19 @@ nav ul form {
 footer {
     position: fixed;
     bottom: 0;
+}
+
+/* Stile dei un generico form */
+.ui-widget-content {
+    text-align: center;
+}
+div form {
+    margin: 0 auto;
+}
+form * {
+    display:block;
+}
+div form input, div form select {
+    margin: 0 auto;
+    min-width: 150px;
 }
