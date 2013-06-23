@@ -107,3 +107,18 @@ td input.button
 {
     min-width:80px;
 }
+
+/* Style for JQuery table */
+#dialog div
+{
+    text-align: center;
+}
+.dataTables_paginate a
+{
+    border: #008200 3px solid;
+    margin: 3px 30px;
+}
+.paginate_disabled_previous
+{
+
+}

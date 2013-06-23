@@ -114,7 +114,7 @@
     </script>
     <!-- Script per la visualizzazione del dialogBox contenente la lista degli Eventi (il risultato della ricerca) -->
     <script>
-        $(function() {
+        $(document).ready(function() {
             $( "#dialog" ).dialog({
                 autoOpen: false,
                 show: {
@@ -130,6 +130,11 @@
             $( ".bottoneChiuso" ).click(function() {
                 $("#dialog").dialog("open");
             });
+        });
+    </script>
+    <script>
+        $(function() {
+            $(".dataTables_paginate a").addClass("button");
         });
     </script>
 </head>
@@ -231,6 +236,14 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <td></td>
             <td></td>

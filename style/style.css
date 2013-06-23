@@ -15,4 +15,10 @@
 .ui-dialog
 {
     min-width: 830px;
+    min-height: 320px;
+    padding: 0 0;
+}
+#dialog
+{
+    min-height: 320px !important;
 }
