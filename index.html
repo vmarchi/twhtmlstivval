@@ -22,6 +22,7 @@
     <script>
         $(document).ready(function() {
             // run the currently selected effect
+            $("#effectLogin").hide();
             function runEffect() {
                 // get effect type from
                 var selectedEffect = "blind";
@@ -34,9 +35,9 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectLogin" ).toggle( selectedEffect, options, 500 );
-            }
+                $("#effectLogin").toggle( selectedEffect, options, 500 );
 
+            }
             // set effect from select menu value
             $( "#loginDropdown" ).click(function() {
 
@@ -47,6 +48,7 @@
     </script>
     <script>
         $(document).ready(function() {
+            $("#effectSearch").hide();
             // run the currently selected effect
             function runEffect() {
                 // get effect type from
@@ -62,10 +64,8 @@
                 // run the effect
                 $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
             }
-
             // set effect from select menu value
             $( "#searchDropdown" ).click(function() {
-
                 runEffect();
                 return false;
             })
@@ -74,7 +74,27 @@
     <script>
         $(document).ready(function() {
             $('#notificationCenter').dataTable();
+            $('#eventListTable').dataTable();
         } );
+    </script>
+    <script>
+        $(function() {
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 100
+                },
+                hide: {
+                    effect: "blind",
+                    duration: 100
+                }
+            });
+
+            $( ".bottoneChiuso" ).click(function() {
+                $("#dialog").dialog("open");
+            });
+        });
     </script>
 </head>
 <body>
@@ -142,6 +162,33 @@
                             </form>
                             <!-- Report Form End -->
                         </div>
+                    </div>
+                </li>
+                <li id="eventList">
+                    <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" class="bottoneChiuso">Lista</a>
+                    <div id="dialog" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+                        <table id="eventListTable">
+                            <thead>
+                                <tr>
+                                    <th>Tipo > Sottotipo</th>
+                                    <th>Data</th>
+                                    <th>Via</th>
+                                    <th>Descrizioni</th>
+                                    <th>Credibilità</th>
+                                    <th>Stato</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </li>
                 <li class="dropdown" id="notification">
