@@ -34,7 +34,7 @@ header nav ul li { /* togliere nav*/
 }
 
 header nav li a {
-    color: #D4D4D4; /* TODO sistemare colore */
+    color: #FAFAFA; /* TODO sistemare colore */
     text-decoration: none;
     margin: 20px;
     font-weight: bold;
