@@ -10,6 +10,7 @@ header nav div:first-child {
 
 #menu {
     float:right;
+    margin-right: 20px;
 }
 
 header nav ul { /* togliere nav*/
@@ -26,8 +27,11 @@ header nav ul li { /* togliere nav*/
 header nav li a {
     color: #D4D4D4; /* TODO sistemare colore */
     text-decoration: none;
+    margin: 20px;
 }
-
+.toggler {
+    position: absolute;
+}
 nav ul form {
     position: absolute;
 }
