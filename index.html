@@ -73,6 +73,31 @@
     </script>
     <script>
         $(document).ready(function() {
+            $("#effectReports").hide();
+            // run the currently selected effect
+            function runEffect() {
+                // get effect type from
+                var selectedEffect = "blind";
+                // most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if ( selectedEffect === "scale" ) {
+                    options = { percent: 0 };
+                } else if ( selectedEffect === "size" ) {
+                    options = { to: { width: 200, height: 60 } };
+                }
+                // run the effect
+                $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
+            }
+            // set effect from select menu value
+            $( "#searchDropdown" ).click(function() {
+                runEffect();
+                return false;
+            })
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
             $('#notificationCenter').dataTable();
             $('#eventListTable').dataTable();
         } );
