@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/jquery-ui-1.10.3.custom.css"/>
     <link rel="stylesheet" href="style/style.css"/>
     <script>
-        $(function() {
+        $(document).ready(function() {
             $( "button" )
                     .button()
                     .click(function( event ) {
@@ -19,7 +19,7 @@
         });
     </script>
     <script>
-        $(function() {
+        $(document).ready(function() {
             // run the currently selected effect
             function runEffect() {
                 // get effect type from
@@ -45,7 +45,7 @@
         });
     </script>
     <script>
-        $(function() {
+        $(document).ready(function() {
             // run the currently selected effect
             function runEffect() {
                 // get effect type from
@@ -69,6 +69,11 @@
                 return false;
             });
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#notificationCenter').dataTable();
+        } );
     </script>
 </head>
 <body>
@@ -138,7 +143,22 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown" id="notification"><a href="#" title="Visualizza Centro Notifiche">Notifiche</a></li>
+                <li class="dropdown" id="notification">
+                    <a href="#" title="Visualizza Centro Notifiche">Notifiche</a>
+                    <div>
+                        <table id="notificationCenter">
+                            <thead>
+                                <th>Tipologia</th>
+                                <th>Sottotipo</th>
+                                <th>Affidabilità</th>
+                                <th>Stato</th>
+                                <th>N.ro Notifiche</th>
+                                <th>Freschezza</th>
+                                <th>Data Creazione</th>
+                            </thead>
+                        </table>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
