@@ -5,6 +5,7 @@
     <title>Gruppo Stark | City Notifier</title>
     <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
     <script src="lib/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+    <script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
     <link rel="stylesheet" href="style/jquery-ui-1.10.3.custom.css"/>
     <link rel="stylesheet" href="style/style.css"/>
     <script>
@@ -69,6 +70,13 @@
                 return false;
             });
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#eventTable').dataTable( {
+                "aaSorting": [[ 4, "desc" ]]
+            } );
+        } );
     </script>
 </head>
 <body>
@@ -139,6 +147,62 @@
                             <!-- Report Form End -->
                         </div>
                     </div>
+                </li>
+                <li class="show" id="list">
+                    <section id="table-canvas">
+                        <table class="display" id="eventTable">
+                            <thead>
+                            <tr>
+                                <th>Evento</th>
+                                <th>Indirizzo</th>
+                                <th>Priorità</th>
+                                <th>Freschezza</th>
+                                <th>Sottotipologia</th>
+                                <th>Stato</th>
+                                <th>Localizza</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><p><a href=#></a></p></td>
+                                <td></td>
+                                <td></td>
+                                <td class="center"></td>
+                                <td></td>
+                                <td class="center"></td>
+                                <td class="center"><a href=#><img src=""></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=#></a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"><a href=#><img src=""></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=#></a></td>
+                                <td></td>
+                                <td></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"><a href=#><img src=""></a></td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Evento</th>
+                                <th>Indirizzo</th>
+                                <th>Priorità</th>
+                                <th>Freschezza</th>
+                                <th>Sottotipologia</th>
+                                <th>Stato</th>
+                                <th>Localizza</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                        <!-- Table with JQuery -->
+                    </section>
                 </li>
             </ul>
         </div>
