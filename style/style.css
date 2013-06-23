@@ -12,3 +12,7 @@
     height: 135px;
     padding: 0.4em;
 }
+.ui-dialog
+{
+    min-width: 830px;
+}

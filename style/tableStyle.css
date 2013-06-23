@@ -1,0 +1,109 @@
+/* Stile delle tabelle */
+table
+{
+    width:95%;
+    height:95%;
+    padding-top:2.5%;
+    padding-bottom:2.5%;
+    text-transform: capitalize;
+}
+th
+{
+    background: #222;
+    color: #e5e5e5;
+    height: 30px;
+}
+tr:last-child td:last-child
+{
+    border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    -webkit-border-bottom-right-radius:0px;
+}
+table tr:first-child td:first-child
+{
+    border-top-left-radius:0px;
+    -moz-border-radius-topleft:0px;
+    -webkit-border-top-left-radius:0px;
+}
+table tr:first-child td:last-child
+{
+    border-top-right-radius:0px;
+    -moz-border-radius-topright:0px;
+    -webkit-border-top-right-radius:0px;
+}
+tr:last-child td:first-child
+{
+    border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    -webkit-border-bottom-left-radius:0px;
+}
+td:last-child
+{
+}
+tr:nth-child(odd)
+{
+    background-color:#d4ffaa;
+}
+tr:nth-child(even)
+{
+    background-color:#ffffff;
+}
+td
+{
+    vertical-align:middle;
+    border:solid #3f7f00;
+    border-width:0 1px 1px 0;
+    padding:7px;
+    font-size:13px;
+    font-weight:normal;
+    color:#000000;
+}
+tr:last-child td
+{
+    border-width:0 1px 0 0;
+}
+tr td:last-child
+{
+    border-width:0 0 1px 0;
+}
+tr:last-child td:last-child
+{
+    border-width:0 0 0 0;
+}
+tr:first-child td
+{
+    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+    background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");
+    background: -o-linear-gradient(top,#5fbf00,3f7f00);
+
+    background-color:#5fbf00;
+    border:solid #3f7f00;
+    text-align:center;
+    border-width:0 0 1px 1px;
+    font-size:14px;
+    font-weight:bold;
+    color:#ffffff;
+}
+tr:first-child:hover td
+{
+    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
+    background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");
+    background: -o-linear-gradient(top,#5fbf00,3f7f00);
+    background-color:#5fbf00;
+}
+tr:first-child td:first-child
+{
+    border-width:0 0 1px 0;
+}
+tr:first-child td:last-child
+{
+    border-width:0 0 1px 1px;
+}
+td input.button
+{
+    min-width:80px;
+}
