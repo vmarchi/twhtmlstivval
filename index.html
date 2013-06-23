@@ -34,7 +34,7 @@
                 }
                 // run the effect
                 $( "#effectLogin" ).toggle( selectedEffect, options, 500 );
-            };
+            }
 
             // set effect from select menu value
             $( "#loginDropdown" ).click(function() {
@@ -60,7 +60,7 @@
                 }
                 // run the effect
                 $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
-            };
+            }
 
             // set effect from select menu value
             $( "#searchDropdown" ).click(function() {
@@ -86,6 +86,8 @@
                         <div class="ui-widget-content ui-corner-all" id="effectLogin">
                             <!-- Test Form Login -->
                             <form name="login" method="post" id="login_module">
+                                <label for="serverList">Server locale</label>
+                                <select id="serverList"></select>
                                 <label for="username">Username</label>
                                 <input id="username" type="email" name="username" placeholder="your@mail.com" required>
                                 <label for="password">Password</label>
@@ -138,7 +140,6 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown" id="notification"><a href="#" title="Visualizza Centro Notifiche">Notifiche</a></li>
             </ul>
         </div>
     </nav>
