@@ -40,7 +40,6 @@
             }
             // set effect from select menu value
             $( "#loginDropdown" ).click(function() {
-
                 runEffect();
                 return false;
             })
@@ -73,34 +72,15 @@
     </script>
     <script>
         $(document).ready(function() {
-            $("#effectReports").hide();
-            // run the currently selected effect
-            function runEffect() {
-                // get effect type from
-                var selectedEffect = "blind";
-                // most effect types need no options passed by default
-                var options = {};
-                // some effects have required parameters
-                if ( selectedEffect === "scale" ) {
-                    options = { percent: 0 };
-                } else if ( selectedEffect === "size" ) {
-                    options = { to: { width: 200, height: 60 } };
-                }
-                // run the effect
-                $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
-            }
-            // set effect from select menu value
-            $( "#searchDropdown" ).click(function() {
-                runEffect();
-                return false;
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
+            $('#notificationCenter').hide();
             $('#notificationCenter').dataTable();
             $('#eventListTable').dataTable();
         } );
+        $(function() {
+            $('#notificationOpener').click(function(){
+                $('#notificationCenter').show();
+            })
+        });
     </script>
     <script>
         $(function() {
@@ -129,7 +109,7 @@
         <div id="logo">
             <a href="index.html" title="Vai alla Homepage"><img src="#" alt="CityNotifier" width="120px" height="40px" /></a>
         </div>
-        <div id="menu">
+        <div>
             <ul>
                 <li class="dropdown" id="login">
                     <a href="#" title="Effettua il Login" id="loginDropdown">Login</a>
@@ -180,7 +160,7 @@
                                 <select id="ReporType"></select>
                                 <label for="ReportSubtype">Sottotipo</label>
                                 <select id="ReportSubtype"></select>
-                                <label for="description">Descrizione</label>
+                                <label for="description">Raggio</label>
                                 <input type="text" id="description" placeholder="Inserisci una descrizione...">
                                 <button type="reset">Cancella</button>
                                 <button type="submit">Cerca</button>
@@ -191,59 +171,9 @@
                 </li>
                 <li id="eventList">
                     <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" class="bottoneChiuso">Lista</a>
-                    <div id="dialog" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
-                        <table id="eventListTable">
-                            <thead>
-                                <tr>
-                                    <th>Tipo > Sottotipo</th>
-                                    <th>Data</th>
-                                    <th>Via</th>
-                                    <th>Descrizioni</th>
-                                    <th>Credibilità</th>
-                                    <th>Stato</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                 </li>
-                <li class="dropdown" id="notification">
-                    <a href="#" title="Visualizza Centro Notifiche">Notifiche</a>
-                    <div>
-                        <table id="notificationCenter">
-                            <thead>
-                                <tr>
-                                    <th>Tipologia</th>
-                                    <th>Sottotipo</th>
-                                    <th>Affidabilità</th>
-                                    <th>Stato</th>
-                                    <th>N.ro Notifiche</th>
-                                    <th>Freschezza</th>
-                                    <th>Data Creazione</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <li id="notification">
+                    <a href="#" title="Visualizza Centro Notifiche" id="notificationOpener">Notifiche</a>
                 </li>
             </ul>
         </div>
@@ -256,5 +186,57 @@
         <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
     </nav>
 </footer>
+<!-- Lista degli eventi presenti ad un determinato raggio -->
+<div id="dialog" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+    <table id="eventListTable">
+        <thead>
+        <tr>
+            <th>Tipo > Sottotipo</th>
+            <th>Data</th>
+            <th>Via</th>
+            <th>Descrizioni</th>
+            <th>Credibilità</th>
+            <th>Stato</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Centro notifiche-->
+<div>
+    <table id="notificationCenter">
+        <thead>
+        <tr>
+            <th>Tipologia</th>
+            <th>Sottotipo</th>
+            <th>Affidabilità</th>
+            <th>Stato</th>
+            <th>N.ro Notifiche</th>
+            <th>Freschezza</th>
+            <th>Data Creazione</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
