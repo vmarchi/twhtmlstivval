@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <title></title>
+    <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+    <script src="lib/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+    <script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="style/jquery-ui-1.10.3.custom.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <script>
+        $(document).ready(function() {
+            $('#example').dataTable( {
+                "aaSorting": [[ 4, "desc" ]]
+            } );
+        } );
+    </script>
 </head>
 <body>
     <header> </header>
@@ -10,6 +22,54 @@
     <section id="map-canvas"> </section>
     <!-- Table area -->
     <section id="table-canvas">
+        <table class="display" id="example">
+        <thead>
+        <tr>
+            <th>Evento</th>
+            <th>Indirizzo</th>
+            <th>Priorità</th>
+            <th>Freschezza</th>
+            <th>Stato</th>
+            <th>Localizza</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="gradeX">
+            <td><p><a href=#>Buca</a> (profonda almeno 50cm)</p></td>
+            <td>Via Dotto 5</td>
+            <td>Alta</td>
+            <td class="center">30</td>
+            <td class="center">scetticismo</td>
+            <td class="center"><a href=#><img src="">tsm</a></td>
+        </tr>
+        <tr class="gradeC">
+            <td>Incidente</td>
+            <td>Piazza Ta</td>
+            <td>alta</td>
+            <td class="center">1</td>
+            <td class="center">accettata</td>
+            <td class="center"><a href=#><img src="">tsm</a></td>
+        </tr>
+        <tr class="gradeA">
+            <td>Cani che abbaiano</td>
+            <td>Via Cracovia 7</td>
+            <td>bassa</td>
+            <td class="center">52</td>
+            <td class="center">chiusa</td>
+            <td class="center"><a href=#><img src="">tsm</a></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Evento</th>
+            <th>Indirizzo</th>
+            <th>Priorità</th>
+            <th>Freschezza</th>
+            <th>Stato</th>
+            <th>Localizza</th>
+        </tr>
+        </tfoot>
+        </table>
         <!-- Table with JQuery -->
     </section>
     <footer>
