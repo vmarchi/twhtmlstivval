@@ -1,4 +1,6 @@
-
+header nav {
+    border: 1px solid;
+}
 /* CSS di Prova */
 header nav div:first-child {
     float: left;
