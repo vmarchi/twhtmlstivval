@@ -6,7 +6,7 @@
     padding: .5em 1em;
     text-decoration: none;
 }
-#effectSearch,#effectLogin {
+#effectSearch,#effectLogin,#effectReports {
     position: relative;
     width: 240px;
     height: 135px;

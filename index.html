@@ -87,15 +87,16 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectSearch" ).toggle( selectedEffect, options, 500 );
+                $( "#effectReports" ).toggle( selectedEffect, options, 500 );
             }
             // set effect from select menu value
-            $( "#searchDropdown" ).click(function() {
+            $( "#reportDropdown" ).click(function() {
                 runEffect();
                 return false;
             })
         });
     </script>
+    <!-- Visualizzazione delle tabelle --->
     <script>
         $(document).ready(function() {
             $('#notificationCenterContainer').hide();
@@ -108,6 +109,7 @@
             })
         });
     </script>
+    <!-- Script per la visualizzazione del dialogBox contenente la lista degli Eventi (il risultato della ricerca) -->
     <script>
         $(function() {
             $( "#dialog" ).dialog({
@@ -177,7 +179,7 @@
                     </div>
                 </li>
                 <li class="dropdown" id="report">
-                    <a href="#" title="Segnala">Segnala</a>
+                    <a href="#" title="Segnala" id="reportDropdown">Segnala</a>
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectReports">
                             <!-- Report Form -->
