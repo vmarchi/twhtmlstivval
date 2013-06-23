@@ -30,6 +30,7 @@ header nav li a {
     color: #D4D4D4; /* TODO sistemare colore */
     text-decoration: none;
     margin: 20px;
+    font-weight: bold;
 }
 .toggler {
     position: absolute;
