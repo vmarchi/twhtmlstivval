@@ -72,13 +72,13 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('#notificationCenter').hide();
+            $('#notificationCenterContainer').hide();
             $('#notificationCenter').dataTable();
             $('#eventListTable').dataTable();
         } );
         $(function() {
             $('#notificationOpener').click(function(){
-                $('#notificationCenter').show();
+                $('#notificationCenterContainer').show();
             })
         });
     </script>
@@ -212,7 +212,7 @@
     </table>
 </div>
 <!-- Centro notifiche-->
-<div>
+<div id="notificationCenterContainer">
     <table id="notificationCenter">
         <thead>
         <tr>
