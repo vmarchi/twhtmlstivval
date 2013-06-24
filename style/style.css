@@ -9,8 +9,9 @@
 #effectSearch,#effectLogin,#effectReports {
     position: relative;
     width: 240px;
-    height: 135px; /* TODO: Questa altezza va sistemata rendendola alta come il contenuto!!! */
+    height: 100%;
     padding: 0.4em;
+    left: -30%;
 }
 .ui-dialog
 {
