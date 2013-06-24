@@ -1,0 +1,83 @@
+section ul {
+    padding: 0;
+    margin: 0;
+}
+
+li.notification {
+    position: relative;
+    float: left;
+    list-style-type: none;
+    width: 100%;
+    margin-top: 6px;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+}
+
+
+#notificationCenterContainer {
+    float: right;
+    width: 250px;
+    border: 1px solid;
+    background-image: url('./sfondoChiaro.png');
+    background-repeat: repeat;
+    color: #E5E5E5;
+    padding: 7px 10px 5px 10px;
+    border-radius: 6px; /* TODO valutare se togliere il bordo arrotondato */
+}
+
+#type {
+    float: left;
+
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#notificationStatus {
+    float: right;
+
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 4px;
+    position: relative;
+}
+
+#nroNotific {
+    float: left;
+    clear: left;
+    font-size: 0.8em;
+}
+#nroNotific::before {
+    content:"N.ro Notifiche: ";
+}
+
+
+#reliability {
+    float: right;
+    font-size: 0.8em;
+}
+#reliability::before {
+    content:"Affidabilità: ";
+}
+
+#creationDate {
+    float: left;
+    clear: right;
+    font-size: 0.8em;
+}
+
+#freshness {
+    float: right;
+    font-size: 0.8em;
+}
+#notificationCenterTitle {
+    background-image: url('./sfondoScuro.png');
+    background-repeat: repeat;
+    padding: 2px;
+    border-radius: 16px; /* TODO valutare se togliere il bordo arrotondato */
+}
+
+#notificationCenterTitle h1 {
+    margin: 0px 0px 0px 0px;
+    text-align: center;
+    font-size: 1.2em;
+}
