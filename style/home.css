@@ -126,6 +126,7 @@ header nav li a
     text-decoration: none;
     color: #FFF;
     position: relative;
+    margin: 0 1px;
 }
 /* Icone e relativi effetti */
 /* Login */
