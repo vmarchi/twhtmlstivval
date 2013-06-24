@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="style/home.css"/>
     <link rel="stylesheet" type="text/css" href="style/tableStyle.css"/>
     <link rel="stylesheet" type="text/css" href="style/notification.css"/>
+    <link rel="stylesheet" type="text/css" href="style/tooltipStyle.css"/>
     <script>
         $(document).ready(function() {
             $( "button" )
@@ -40,7 +41,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $("#effectLogin").toggle( selectedEffect, options, 170 );
+                $("#effectLogin").toggle( selectedEffect, options, 100 );
 
             }
             // set effect from select menu value
@@ -66,7 +67,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectSearch" ).toggle( selectedEffect, options, 170 );
+                $( "#effectSearch" ).toggle( selectedEffect, options, 100 );
             }
             // set effect from select menu value
             $( "#searchDropdown" ).click(function() {
@@ -91,7 +92,7 @@
                     options = { to: { width: 200, height: 60 } };
                 }
                 // run the effect
-                $( "#effectReports" ).toggle( selectedEffect, options, 170 );
+                $( "#effectReports" ).toggle( selectedEffect, options, 100 );
             }
             // set effect from select menu value
             $( "#reportDropdown" ).click(function() {
@@ -131,11 +132,11 @@
             $( "#dialog" ).dialog({
                 autoOpen: false,
                 show: {
-                    effect: "blind",
+                    effect: "fade",
                     duration: 100
                 },
                 hide: {
-                    effect: "blind",
+                    effect: "fade",
                     duration: 100
                 }
             });
@@ -179,7 +180,7 @@
                     <!-- fine div di login -->
                 </li>
                 <li class="dropdown" id="search">
-                    <a href="#" title="Cerca Situazioni" id="searchDropdown"><div class="main_nav_label">Cerca</div> </a>
+                    <a href="#" title="Cerca Situazioni" id="searchDropdown"><div class="main_nav_label">Cerca</div></a>
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectSearch">
                             <!-- Search Form -->
@@ -194,8 +195,10 @@
                                 <input id="dateStart" class="date">
                                 <label for="dateEnd">Data Fine</label>
                                 <input id="dateEnd" class="date">
-                                <button type="reset">Cancella</button>
-                                <button type="submit">Cerca</button>
+                                <div class="buttonContainer">
+                                    <button type="reset">Cancella</button>
+                                    <button type="submit">Cerca</button>
+                                </div>
                             </form>
                             <!-- Search Form End -->
                         </div>

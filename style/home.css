@@ -77,27 +77,34 @@ footer {
 
 /* Stile dei un generico form */
 li div.toggler {
-    margin-top: 7px;
+    margin-top: 3px;
 }
 .ui-widget-content {
     text-align: center;
 }
+.ui-dialog .ui-dialog-title  {
+    width: 100%;
+}
 div form {
-    padding: 2px 17%;
+    padding: 0 17%;
 }
 form * {
     display:block;
 }
 div form input, div form select {
     margin: 3px auto;
-    min-width: 150px;
+    min-height: 26px;
 }
 form button {
-    margin-top: 10px;
+    margin: 10px 0;
+    display: inline-block;
 }
 /* Stile dei bottoni */
 button span {
     font-size: 13px;
+}
+.buttonContainer {
+    display: inline-table;
 }
 /*Stile del menu */
 header nav div.main_nav_label {
@@ -113,6 +120,9 @@ header nav div.main_nav_label {
     background: url("images/tip.png") left bottom no-repeat;
     padding: 5px 5px 9px 5px;
     height: 10px;
+}
+header nav div.main_nav_label:hover {
+    display: block;
 }
 header nav li a
 {
@@ -171,3 +181,29 @@ a#listShow:active {
 }
 /* Centro Notifiche */
 
+/* Form di Login*/
+#username,#password {
+    padding-left: 32px;
+    background:left;
+    min-width: 119px;
+    font-size: 13px;
+
+}
+#username {
+    background: url("images/loginUserBlack.png") left  no-repeat transparent;
+    background-size: 27px 27px;
+}
+#password {
+    background: url("images/loginPassword.png") left  no-repeat transparent;
+    background-size: 27px 27px;
+}
+
+/* Form di ricerca */
+select
+{
+    width: 150px;
+}
+input
+{
+    width:150px;
+}
