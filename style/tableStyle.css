@@ -75,7 +75,6 @@ tr:first-child td
     background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
     background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");
     background: -o-linear-gradient(top,#5fbf00,3f7f00);
 
     background-color:#5fbf00;
@@ -91,7 +90,6 @@ tr:first-child:hover td
     background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
     background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#5fbf00", endColorstr="#3f7f00");
     background: -o-linear-gradient(top,#5fbf00,3f7f00);
     background-color:#5fbf00;
 }

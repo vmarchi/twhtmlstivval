@@ -10,14 +10,8 @@ a:visited
     color:#e5e5e5;
 }
 header nav, footer {
-    background: #141414;
     width: 100%;
-    background: -moz-linear-gradient(top, #32323a 0%, #141414 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #32323a), color-stop(100%, #141414));
-    background: -webkit-linear-gradient(top, #32323a 0%, #141414 100%);
-    background: -o-linear-gradient(top, #32323a 0%, #141414 100%);
-    background: -ms-linear-gradient(top, #32323a 0%, #141414 100%);
-    background: linear-gradient(to bottom, #32323a 0%, #141414 100%);
+    background: rgba(0, 0, 0, 0.8)
 }
 header nav {
     display: inline-block;
@@ -44,7 +38,6 @@ footer a
 }
 #menu {
     float:right;
-    margin: 20px 20px 0 0;
     min-width:500px;
     /* TODO: Controllare min margin left se restringo la finestra */
 }
@@ -68,7 +61,6 @@ header nav ul li:hover {
 header nav li a {
     color: #e5e5e5;
     text-decoration: none;
-    margin: 20px;
     font-weight: bold;
 }
 .toggler {
@@ -97,7 +89,7 @@ form * {
     display:block;
 }
 div form input, div form select {
-    margin: 0 auto;
+    margin: 3px auto;
     min-width: 150px;
 }
 form button {
@@ -107,3 +99,74 @@ form button {
 button span {
     font-size: 13px;
 }
+/*Stile del menu */
+header nav div.main_nav_label {
+    display: none;
+    font-size: 12px;
+    line-height: 9px;
+    color: #EEE;
+    position: absolute;
+    bottom: 46px;
+    left: 0px;
+    text-align: left;
+    font-weight: 300;
+    background: url("images/tip.png") left bottom no-repeat;
+    padding: 5px 5px 9px 5px;
+    height: 10px;
+}
+header nav li a
+{
+    min-width: 40px;
+    height: 40px;
+    padding: 5px;
+    line-height: 40px;
+    font-size: 1.5em;
+    display: inline-block;
+    outline: 0;
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+}
+/* Icone e relativi effetti */
+/* Login */
+a#loginDropdown {
+    background:url("images/loginUserWhite.png") center no-repeat black;
+}
+a#loginDropdown:hover {
+    background:url("images/loginUserWhite.png") center no-repeat green;
+}
+a#loginDropdown:active {
+    background: white;
+}
+/* Nuova Segnalazione */
+a#reportDropdown {
+    background:url("images/segnalaWhite.png") center no-repeat black;
+}
+a#reportDropdown:hover {
+    background:url("images/segnalaWhite.png") center no-repeat green;
+}
+a#reportDropdown:active {
+    background: white;
+}
+/* Ricerca */
+a#searchDropdown{
+    background:url("images/searchWhite.png") center no-repeat black;
+}
+a#searchDropdown:hover {
+    background:url("images/searchWhite.png") center no-repeat green;
+}
+a#searchDropdown:active {
+    background: white;
+}
+/* Lista */
+a#listShow{
+    background:url("images/listWhite.png") center no-repeat black;
+}
+a#listShow:hover {
+    background:url("images/listWhite.png") center no-repeat green;
+}
+a#listShow:active {
+    background: white;
+}
+/* Centro Notifiche */
+
