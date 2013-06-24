@@ -127,6 +127,7 @@
                     $("#dialog").dialog(status);
                 }
             }
+            //Definisco le proprietà di comparsa/dissolvenza di un dialog
             $( "#dialog" ).dialog({
                 autoOpen: false,
                 show: {
@@ -139,7 +140,7 @@
                 }
             });
 
-            $( ".bottoneChiuso" ).click(function() {
+            $( "#listShow" ).click(function() {
                 runEffect();
             });
         });
@@ -160,7 +161,7 @@
         <div id="menu">
             <ul>
                 <li class="dropdown" id="login">
-                    <a href="#" title="Effettua il Login" id="loginDropdown">  Login </a>
+                    <a href="#" title="Effettua il Login" id="loginDropdown"> <div class="main_nav_label">Login</div> </a>
                     <!-- div di login -->
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectLogin">
@@ -178,7 +179,7 @@
                     <!-- fine div di login -->
                 </li>
                 <li class="dropdown" id="search">
-                    <a href="#" title="Cerca Situazioni" id="searchDropdown">Cerca</a>
+                    <a href="#" title="Cerca Situazioni" id="searchDropdown"><div class="main_nav_label">Cerca</div> </a>
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectSearch">
                             <!-- Search Form -->
@@ -201,7 +202,7 @@
                     </div>
                 </li>
                 <li class="dropdown" id="report">
-                    <a href="#" title="Segnala" id="reportDropdown">Segnala</a>
+                    <a href="#" title="Segnala" id="reportDropdown"><div class="main_nav_label">Segnala</div></a>
                     <div class="toggler">
                         <div class="ui-widget-content ui-corner-all" id="effectReports">
                             <!-- Report Form -->
@@ -220,7 +221,7 @@
                     </div>
                 </li>
                 <li id="eventList">
-                    <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" class="bottoneChiuso">Lista</a>
+                    <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" id="listShow"><div class="main_nav_label">Lista </div></a>
                 </li>
                 <li id="notification">
                     <a href="#" title="Visualizza Centro Notifiche" id="notificationOpener">Notifiche</a>
