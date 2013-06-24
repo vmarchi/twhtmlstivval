@@ -92,7 +92,7 @@ div form {
 form * {
     display:block;
 }
-div form input, div form select {
+div form input, div form select, div form textarea {
     margin: 3px auto;
     min-height: 26px;
 }
@@ -151,23 +151,23 @@ a#loginDropdown:active {
     background: white;
 }
 /* Nuova Segnalazione */
-a#reportDropdown {
+a#reportShow {
     background:url("images/segnalaWhite.png") center no-repeat black;
 }
-a#reportDropdown:hover {
+a#reportShow:hover {
     background:url("images/segnalaWhite.png") center no-repeat green;
 }
-a#reportDropdown:active {
+a#reportShow:active {
     background: white;
 }
 /* Ricerca */
-a#searchDropdown{
+a#searchShow {
     background:url("images/searchWhite.png") center no-repeat black;
 }
-a#searchDropdown:hover {
+a#searchShow:hover {
     background:url("images/searchWhite.png") center no-repeat green;
 }
-a#searchDropdown:active {
+a#searchShow:active {
     background: white;
 }
 /* Lista */

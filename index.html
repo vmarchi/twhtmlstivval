@@ -51,56 +51,7 @@
             })
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            $("#effectSearch").hide();
-            // run the currently selected effect
-            function runEffect() {
-                // get effect type from
-                var selectedEffect = "blind";
-                // most effect types need no options passed by default
-                var options = {};
-                // some effects have required parameters
-                if ( selectedEffect === "scale" ) {
-                    options = { percent: 0 };
-                } else if ( selectedEffect === "size" ) {
-                    options = { to: { width: 200, height: 60 } };
-                }
-                // run the effect
-                $( "#effectSearch" ).toggle( selectedEffect, options, 100 );
-            }
-            // set effect from select menu value
-            $( "#searchDropdown" ).click(function() {
-                runEffect();
-                return false;
-            })
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#effectReports").hide();
-            // run the currently selected effect
-            function runEffect() {
-                // get effect type from
-                var selectedEffect = "blind";
-                // most effect types need no options passed by default
-                var options = {};
-                // some effects have required parameters
-                if ( selectedEffect === "scale" ) {
-                    options = { percent: 0 };
-                } else if ( selectedEffect === "size" ) {
-                    options = { to: { width: 200, height: 60 } };
-                }
-                // run the effect
-                $( "#effectReports" ).toggle( selectedEffect, options, 100 );
-            }
-            // set effect from select menu value
-            $( "#reportDropdown" ).click(function() {
-                runEffect();
-                return false;
-            })
-        });
-    </script>
+
     <!-- Visualizzazione delle tabelle --->
     <script>
         $(document).ready(function() {
@@ -112,6 +63,38 @@
             $('#notificationOpener').click(function(){
                 $('#notificationCenterContainer').show();
             })
+        });
+    </script>
+    <!-- Script per la visualizzazione del dialogBox contenente la form di ricerca di eventi -->
+    <script>
+        $(document).ready(function() {
+            var status="close";
+            function runEffect() {
+                if(status==="close") {
+                    status="open";
+                    $("#effectSearch").dialog(status);
+                }
+                else {
+                    status="close";
+                    $("#effectSearch").dialog(status);
+                }
+            }
+            //Definisco le proprietà di comparsa/dissolvenza di un dialog
+            $( "#effectSearch" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "fade",
+                    duration: 100
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 100
+                }
+            });
+
+            $( "#searchShow" ).click(function() {
+                runEffect();
+            });
         });
     </script>
     <!-- Script per la visualizzazione del dialogBox contenente la lista degli Eventi (il risultato della ricerca) -->
@@ -142,6 +125,38 @@
             });
 
             $( "#listShow" ).click(function() {
+                runEffect();
+            });
+        });
+    </script>
+    <!-- Script per la visualizzazione del dialogBox contenente il form di creazione di una nuova Segnalazione -->
+    <script>
+        $(document).ready(function() {
+            var status="close";
+            function runEffect() {
+                if(status==="close") {
+                    status="open";
+                    $("#effectReports").dialog(status);
+                }
+                else {
+                    status="close";
+                    $("#effectReports").dialog(status);
+                }
+            }
+            //Definisco le proprietà di comparsa/dissolvenza di un dialog
+            $( "#effectReports" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "fade",
+                    duration: 100
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 100
+                }
+            });
+
+            $( "#reportShow" ).click(function() {
                 runEffect();
             });
         });
@@ -180,48 +195,10 @@
                     <!-- fine div di login -->
                 </li>
                 <li class="dropdown" id="search">
-                    <a href="#" title="Cerca Situazioni" id="searchDropdown"><div class="main_nav_label">Cerca</div></a>
-                    <div class="toggler">
-                        <div class="ui-widget-content ui-corner-all" id="effectSearch">
-                            <!-- Search Form -->
-                            <form name="search" method="get" id="search_module">
-                                <label for="SearchType">Tipologia</label>
-                                <select id="SearchType"></select>
-                                <label for="SearchSubtype">Sottotipo</label>
-                                <select id="SearchSubtype"></select>
-                                <label for="radius">Raggio</label>
-                                <input type="text" id="radius" placeholder="Raggio (km)">
-                                <label for="dateStart">Data Inizio</label>
-                                <input id="dateStart" class="date">
-                                <label for="dateEnd">Data Fine</label>
-                                <input id="dateEnd" class="date">
-                                <div class="buttonContainer">
-                                    <button type="reset">Cancella</button>
-                                    <button type="submit">Cerca</button>
-                                </div>
-                            </form>
-                            <!-- Search Form End -->
-                        </div>
-                    </div>
+                    <a href="#" title="Cerca Situazioni" id="searchShow"><div class="main_nav_label">Cerca</div></a>
                 </li>
-                <li class="dropdown" id="report">
-                    <a href="#" title="Segnala" id="reportDropdown"><div class="main_nav_label">Segnala</div></a>
-                    <div class="toggler">
-                        <div class="ui-widget-content ui-corner-all" id="effectReports">
-                            <!-- Report Form -->
-                            <form name="report" method="post" id="report_module">
-                                <label for="ReporType">Tipologia</label>
-                                <select id="ReporType"></select>
-                                <label for="ReportSubtype">Sottotipo</label>
-                                <select id="ReportSubtype"></select>
-                                <label for="description">Raggio</label>
-                                <input type="text" id="description" placeholder="Inserisci una descrizione...">
-                                <button type="reset">Cancella</button>
-                                <button type="submit">Cerca</button>
-                            </form>
-                            <!-- Report Form End -->
-                        </div>
-                    </div>
+                <li id="report">
+                    <a href="#" title="Segnala" id="reportShow"><div class="main_nav_label">Segnala</div></a>
                 </li>
                 <li id="eventList">
                     <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" id="listShow"><div class="main_nav_label">Lista </div></a>
@@ -240,6 +217,46 @@
         <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
     </nav>
 </footer>
+<!-- Dialog di ricerca di un elemento -->
+<div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+    <!-- Search Form -->
+    <form name="search" method="get" id="search_module">
+        <label for="SearchType">Tipologia</label>
+        <select id="SearchType"></select>
+        <label for="SearchSubtypes">Sottotipi</label>
+        <div id="SearchSubtypes">
+            <input type=checkbox value="Cacca">
+            <input type=checkbox value="Casadasd">
+            <input type=checkbox value="Caccasgasga">
+        </div>
+        <label for="radius">Raggio</label>
+        <input type="text" id="radius" placeholder="Raggio (km)">
+        <label for="dateStart">Data Inizio</label>
+        <input id="dateStart" class="date">
+        <label for="dateEnd">Data Fine</label>
+        <input id="dateEnd" class="date">
+        <div class="buttonContainer">
+            <button type="reset">Cancella</button>
+            <button type="submit">Cerca</button>
+        </div>
+    </form>
+    <!-- Search Form End -->
+</div>
+<!-- Form di inserimento di un evento -->
+<div id="effectReports" title="Inserisci un nuovo Evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+    <!-- Report Form -->
+    <form name="report" method="post" id="report_module">
+        <label for="ReporType">Tipologia</label>
+        <select id="ReporType"></select>
+        <label for="ReportSubtype">Sottotipo</label>
+        <select id="ReportSubtype"></select>
+        <label for="description">Descrizione</label>
+        <textarea id="description" placeholder="Inserisci una descrizione..."> </textarea>
+        <button type="reset">Cancella</button>
+        <button type="submit">Inserisci</button>
+    </form>
+    <!-- Report Form End -->
+</div>
 <!-- Lista degli eventi presenti ad un determinato raggio -->
 <div id="dialog" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
     <table id="eventListTable">
@@ -269,7 +286,7 @@
             <td></td>
             <td></td>
             <td></td>
-        </tr>
+        </tr>-
         </tbody>
     </table>
 </div>
