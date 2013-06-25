@@ -6,6 +6,11 @@ body {
     color:#141414;
     overflow-x: hidden;
 }
+.logo a img
+{
+    width: 120px;
+    height: 40px;
+}
 a:visited
 {
     text-decoration: none;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="it" xml:lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
 <head>
     <meta charset="UTF-8" />
     <title>Gruppo Stark | City Notifier</title>
@@ -52,7 +52,7 @@
         });
     </script>
 
-    <!-- Visualizzazione delle tabelle --->
+    <!-- Visualizzazione delle tabelle -->
     <script>
         $(document).ready(function() {
             $('#notificationCenterContainer').hide();
@@ -181,7 +181,7 @@
     <!-- Menu -->
     <nav>
         <div id="logo">
-            <a href="index.html" title="Vai alla Homepage"><img src="#" alt="CityNotifier" width="120px" height="40px" /></a>
+            <a href="index.html" title="Vai alla Homepage"><img src="#" alt="CityNotifier"/></a>
         </div>
         <div id="menu">
             <ul>
@@ -235,17 +235,15 @@
         <div id="searchType">
             <h3>Title</h3>
             <div>
-                <p>
-                    <label for="SearchSubtypes">Sottotipi</label>
-                    <div id="SearchSubtypes">
+                <label>Sottotipi</label>
+                <div id="SearchSubtypes">
                     <input id="incidente" class="css-checkbox subtype" type="checkbox" />
-                    <label for="incidente" name="Incidente" class="css-label">Incidente</label>
+                    <label for="incidente" class="css-label">Incidente</label>
                     <input id="coda" class="css-checkbox subtype" type="checkbox" />
-                    <label for="coda" name="Coda" class="css-label">Coda</label>
+                    <label for="coda" class="css-label">Coda</label>
                     <input id="buca" class="css-checkbox subtype" type="checkbox" />
-                    <label for="buca" name="Buca" class="css-label">Buca</label>
-                    </div>
-                </p>
+                    <label for="buca" class="css-label">Buca</label>
+                </div>
             </div>
         </div>
         <label for="radius">Raggio</label>
