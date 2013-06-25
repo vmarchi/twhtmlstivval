@@ -3,15 +3,28 @@ table
 {
     width:95%;
     height:95%;
-    padding-top:2.5%;
-    padding-bottom:2.5%;
     text-transform: capitalize;
+    box-shadow: 6px 8px 17px #888;
+    margin: 10px 10px;
 }
 th
 {
     background: #222;
     color: #e5e5e5;
     height: 30px;
+    font-weight: lighter;
+    border:#ffffff solid;
+    border-width: 0 1px 0 0;
+}
+tbody td{
+    border:#0d6c0c solid;
+    border-width: 0 1px 0 0;
+}
+th:last-child {
+    border-width: 0;
+}
+td:last-child {
+    border-width: 0;
 }
 tr:last-child td:last-child
 {
@@ -37,9 +50,6 @@ tr:last-child td:first-child
     -moz-border-radius-bottomleft:0px;
     -webkit-border-bottom-left-radius:0px;
 }
-td:last-child
-{
-}
 tr:nth-child(odd)
 {
     background-color:#d4ffaa;
@@ -51,55 +61,21 @@ tr:nth-child(even)
 td
 {
     vertical-align:middle;
-    border:solid #3f7f00;
-    border-width:0 1px 1px 0;
     padding:7px;
     font-size:13px;
     font-weight:normal;
     color:#000000;
 }
-tr:last-child td
-{
-    border-width:0 1px 0 0;
-}
-tr td:last-child
-{
-    border-width:0 0 1px 0;
-}
-tr:last-child td:last-child
-{
-    border-width:0 0 0 0;
-}
 tr:first-child td
 {
-    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
-    background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-    background: -o-linear-gradient(top,#5fbf00,3f7f00);
-
-    background-color:#5fbf00;
-    border:solid #3f7f00;
+    background-color: #83b54b;
     text-align:center;
-    border-width:0 0 1px 1px;
-    font-size:14px;
-    font-weight:bold;
+    font-size:14px;;
     color:#ffffff;
 }
 tr:first-child:hover td
 {
-    background:-o-linear-gradient(bottom, #5fbf00 5%, #3f7f00 100%);
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5fbf00), color-stop(1, #3f7f00) );
-    background:-moz-linear-gradient( center top, #5fbf00 5%, #3f7f00 100% );
-    background: -o-linear-gradient(top,#5fbf00,3f7f00);
     background-color:#5fbf00;
-}
-tr:first-child td:first-child
-{
-    border-width:0 0 1px 0;
-}
-tr:first-child td:last-child
-{
-    border-width:0 0 1px 1px;
 }
 td input.button
 {
@@ -113,8 +89,16 @@ td input.button
 }
 .dataTables_paginate a
 {
-    border: #008200 3px solid;
-    margin: 3px 30px;
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    margin-right: 10px;
 }
 .paginate_disabled_previous
 {

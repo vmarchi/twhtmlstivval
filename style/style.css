@@ -20,7 +20,7 @@
 }
 #dialog
 {
-    min-height: 320px !important;
+    height: 100%;
 }
 /* Stile del checkbox */
 input[type=checkbox].css-checkbox {
@@ -44,5 +44,5 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 
 .css-label{
-    background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+    background-image:url("images/dark-check-green.png");
 }

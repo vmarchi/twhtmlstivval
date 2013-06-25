@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" lang="it" xml:lang="it">
 <head>
     <meta charset="UTF-8" />
     <title>Gruppo Stark | City Notifier</title>
@@ -11,9 +11,9 @@
     <link rel="stylesheet" type="text/css" href="style/jquery-ui-1.10.3.custom.min.css"/>
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
     <link rel="stylesheet" type="text/css" href="style/home.css"/>
-    <link rel="stylesheet" type="text/css" href="style/tableStyle.css"/>
     <link rel="stylesheet" type="text/css" href="style/notification.css"/>
-    <link rel="stylesheet" type="text/css" href="style/tooltipStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="style/tableStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="style/tableStyle2.css"/>
     <script>
         $(document).ready(function() {
             $( "button" )
@@ -166,6 +166,15 @@
             $(".dataTables_paginate a").addClass("button");
         });
     </script>
+    <script>
+        $(function() {
+            $( "#searchType" ).accordion({
+                active: false,
+                collapsible: true,
+                heightStyle: "content"
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -187,6 +196,8 @@
                                 <input id="username" type="email" name="username" placeholder="your@mail.com" required>
                                 <label for="password">Password</label>
                                 <input id="password" type="password" name="password" placeholder="password" required>
+                                <label for="selectServer">Server</label>
+                                <select id="selectServer"></select>
                                 <button id="loginButton" type="submit">Login</button>
                             </form>
                             <!-- End Test Form Login-->
@@ -194,7 +205,7 @@
                     </div>
                     <!-- fine div di login -->
                 </li>
-                <li class="dropdown" id="search">
+                <li id="search">
                     <a href="#" title="Cerca Situazioni" id="searchShow"><div class="main_nav_label">Cerca</div></a>
                 </li>
                 <li id="report">
@@ -221,16 +232,21 @@
 <div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
     <!-- Search Form -->
     <form name="search" method="get" id="search_module">
-        <label for="SearchType">Tipologia</label>
-        <select id="SearchType"></select>
-        <label for="SearchSubtypes">Sottotipi</label>
-        <div id="SearchSubtypes">
-            <input id="incidente" class="css-checkbox" type="checkbox" />
-            <label for="incidente" name="Incidente" class="css-label">Incidente</label>
-            <input id="coda" class="css-checkbox" type="checkbox" />
-            <label for="coda" name="Coda" class="css-label">Coda</label>
-            <input id="buca" class="css-checkbox" type="checkbox" />
-            <label for="buca" name="Buca" class="css-label">Buca</label>
+        <div id="searchType">
+            <h3>Title</h3>
+            <div>
+                <p>
+                    <label for="SearchSubtypes">Sottotipi</label>
+                    <div id="SearchSubtypes">
+                    <input id="incidente" class="css-checkbox subtype" type="checkbox" />
+                    <label for="incidente" name="Incidente" class="css-label">Incidente</label>
+                    <input id="coda" class="css-checkbox subtype" type="checkbox" />
+                    <label for="coda" name="Coda" class="css-label">Coda</label>
+                    <input id="buca" class="css-checkbox subtype" type="checkbox" />
+                    <label for="buca" name="Buca" class="css-label">Buca</label>
+                    </div>
+                </p>
+            </div>
         </div>
         <label for="radius">Raggio</label>
         <input type="text" id="radius" placeholder="Raggio (km)">
@@ -262,34 +278,34 @@
 </div>
 <!-- Lista degli eventi presenti ad un determinato raggio -->
 <div id="dialog" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
-    <table id="eventListTable">
+    <table id="eventListTable" class="bordered">
         <thead>
         <tr>
             <th>Tipo > Sottotipo</th>
             <th>Data</th>
             <th>Via</th>
             <th>Descrizioni</th>
-            <th>Credibilità</th>
+            <th>Credibilit&agrave;</th>
             <th>Stato</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>asdsad</td>
+            <td>sadsad</td>
+            <td>gasg</td>
+            <td>gasg</td>
+            <td>gsasag</td>
+            <td>assas</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>-
+            <td>qwqe</td>
+            <td>qwrqwr</td>
+            <td>qwrwqr</td>
+            <td>qrwwqrt</td>
+            <td>qrwqr</td>
+            <td>qwtqwt</td>
+        </tr>
         </tbody>
     </table>
 </div>
