@@ -92,9 +92,6 @@ li div.toggler {
 .ui-dialog .ui-dialog-title  {
     width: 100%;
 }
-div form {
-    padding: 0 17%;
-}
 form * {
     display:block;
 }

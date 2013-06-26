@@ -15,7 +15,7 @@ li.notification {
 
 
 #notificationCenterContainer {
-    z-index:9999;
+    z-index:900;
     float: right;
     width: 250px;
     border: 1px solid;
