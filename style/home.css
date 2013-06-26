@@ -183,15 +183,48 @@ a#listShow:hover {
 a#listShow:active {
     background: white;
 }
+/* Pagina delle informazioni */
+a#infoPageOpener{
+    background:url("images/infoButton.png") center no-repeat black;
+    background-size: 37px 37px;
+}
+a#infoPageOpener:hover {
+    background:url("images/infoButton.png") center no-repeat green;
+    background-size: 37px 37px;
+}
+a#infoPageOpener:active {
+    background: white;
+}
 /* Centro Notifiche */
-
+a#notificationOpener{
+    background:url("images/notificationButton.png") center no-repeat black;
+    background-size: 37px 37px;
+}
+a#notificationOpener:hover {
+    background:url("images/notificationButton.png") center no-repeat green;
+    background-size: 37px 37px;
+}
+a#notificationOpener:active {
+    background: white;
+}
+/* Home Button */
+a#homeOpener{
+    background:url("images/homeButtonWhite.png") center no-repeat black;
+    background-size: 37px 37px;
+}
+a#homeOpener:hover {
+    background:url("images/homeButtonWhite.png") center no-repeat green;
+    background-size: 37px 37px;
+}
+a#homeOpener:active {
+    background: white;
+}
 /* Form di Login*/
 #username,#password {
     padding-left: 32px;
     background:left;
     min-width: 119px;
     font-size: 13px;
-
 }
 #username {
     background: url("images/loginUserBlack.png") left  no-repeat transparent;
