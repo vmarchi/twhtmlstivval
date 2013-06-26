@@ -28,27 +28,27 @@ td:last-child {
 }
 tr:last-child td:last-child
 {
-    border-bottom-right-radius:0px;
-    -moz-border-radius-bottomright:0px;
-    -webkit-border-bottom-right-radius:0px;
+    border-bottom-right-radius:0;
+    -moz-border-radius-bottomright:0;
+    -webkit-border-bottom-right-radius:0;
 }
 table tr:first-child td:first-child
 {
-    border-top-left-radius:0px;
-    -moz-border-radius-topleft:0px;
-    -webkit-border-top-left-radius:0px;
+    border-top-left-radius:0;
+    -moz-border-radius-topleft:0;
+    -webkit-border-top-left-radius:0;
 }
 table tr:first-child td:last-child
 {
-    border-top-right-radius:0px;
-    -moz-border-radius-topright:0px;
-    -webkit-border-top-right-radius:0px;
+    border-top-right-radius:0;
+    -moz-border-radius-topright:0;
+    -webkit-border-top-right-radius:0;
 }
 tr:last-child td:first-child
 {
-    border-bottom-left-radius:0px;
-    -moz-border-radius-bottomleft:0px;
-    -webkit-border-bottom-left-radius:0px;
+    border-bottom-left-radius:0;
+    -moz-border-radius-bottomleft:0;
+    -webkit-border-bottom-left-radius:0;
 }
 tr:nth-child(odd)
 {
@@ -81,9 +81,49 @@ td input.button
 {
     min-width:80px;
 }
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    border-color: #000000;
+}
+th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+.bordered tr:hover
+{
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.highlight
+{
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
 
 /* Style for JQuery table */
-#dialog div
+#effectList div
 {
     text-align: center;
 }

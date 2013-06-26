@@ -13,9 +13,9 @@
 	<script src="../../ui/jquery.ui.dialog.js"></script>
 	<link rel="stylesheet" href="../demos.css">
 	<style>
-	#dialog label, #dialog input { display:block; }
-	#dialog label { margin-top: 0.5em; }
-	#dialog input, #dialog textarea { width: 95%; }
+	#effectList label, #effectList input { display:block; }
+	#effectList label { margin-top: 0.5em; }
+	#effectList input, #effectList textarea { width: 95%; }
 	#tabs { margin-top: 1em; }
 	#tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
 	#add_tab { cursor: pointer; }
@@ -30,7 +30,7 @@
 		var tabs = $( "#tabs" ).tabs();
 
 		// modal dialog init: custom buttons and a "close" callback reseting the form inside
-		var dialog = $( "#dialog" ).dialog({
+		var dialog = $( "#effectList" ).dialog({
 			autoOpen: false,
 			modal: true,
 			buttons: {
@@ -93,7 +93,7 @@
 </head>
 <body>
 
-<div id="dialog" title="Tab data">
+<div id="effectList" title="Tab data">
 	<form>
 		<fieldset class="ui-helper-reset">
 			<label for="tab_title">Title</label>
