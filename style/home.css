@@ -1,5 +1,6 @@
 html {
     width: 100%;
+    height: 100%;
 }
 body {
     margin: 0;
@@ -8,7 +9,8 @@ body {
     font-size: 13px;
     color:#141414;
     overflow-x: hidden;
-    width:100%
+    width:100%;
+    height: 100%;
 }
 #logo {
     float:left;
@@ -32,6 +34,7 @@ header {
     top: 0;
     display: block;
     width: 100%;
+    min-width:750px;
 }
 
 header nav, footer {
@@ -46,9 +49,10 @@ header nav {
 }
 
 #content {
-    position:relative;
+    position:absolute;
     top:58px;
-    bottom:53px;
+    bottom:55px;
+    width: 100%;
 }
 /* Regole che permettono il corretto posizionamento della mappa */
 #map-canvas
@@ -56,8 +60,8 @@ header nav {
     position:absolute;
     left:3px;
     top: 2px;
-    height: 800px;
     width:100%;
+    height:100%;
     background: white;
 }
 
@@ -314,7 +318,6 @@ a#homeOpener:active {
     background:left;
     min-width: 119px;
     font-size: 13px;
-
 }
 
 #username {

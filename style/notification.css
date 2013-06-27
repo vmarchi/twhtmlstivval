@@ -16,7 +16,7 @@ li.notification {
     position: absolute;
     top: 2px;
     right: 2px;
-    height: 800px;
+    height:100%;
     z-index:900;
     width: 250px;
     border: 1px solid #71b00c;
