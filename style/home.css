@@ -310,6 +310,13 @@ a#homeOpener:active {
 }
 
 /* Form di ricerca */
+#datePickForm label, #datePickForm input {
+    display:inline;
+}
+#searchType {
+    width: 400px;
+    margin:0 auto;
+}
 select {
     width: 150px;
 }
