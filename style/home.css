@@ -6,10 +6,13 @@ body {
     color:#141414;
     overflow-x: hidden;
 }
-.logo a img
+#logo {
+    float:left;
+}
+#logo a img
 {
     width: 120px;
-    height: 40px;
+    height: 50px;
 }
 a:visited
 {
@@ -23,6 +26,7 @@ header nav, footer {
 header nav {
     display: inline-block;
     border-bottom: 2px solid #71b00c;
+    position: absolute;
 }
 /* CSS di Prova */
 header nav div:first-child {
@@ -43,12 +47,23 @@ footer a
     text-decoration: none;
     color: #e5e5e5;
 }
+#welcomeMessage {
+    display: block;
+    height: 55px;
+}
+#welcomeMessage div{
+    color: #E5E5E5;
+    float:right;
+    position:relative;
+    top:50%;
+    margin-top: -9px;
+    margin-right: 60px;
+
+}
 #menu {
     float:right;
-    min-width:500px;
-    /* TODO: Controllare min margin left se restringo la finestra */
+    clear:right;
 }
-
 header nav ul { /* togliere nav*/
     padding: 0;
     margin: 0;
@@ -59,16 +74,10 @@ header nav ul li { /* togliere nav*/
     float: left;
     list-style-type: none;
 }
-/*
-header nav ul li:hover {
-    border: 1px #e5e5e5 solid;
-    border-radius: 8px;
-}
-*/
+
 header nav li a {
     color: #e5e5e5;
     text-decoration: none;
-    font-weight: bold;
 }
 .toggler {
     position: absolute;
