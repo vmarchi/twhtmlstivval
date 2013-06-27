@@ -68,7 +68,7 @@
 </header>
 <!-- Area mappa -->
 <div id="content">
-    <section id="map-canvas"> </section>
+    <section id="map-canvas"></section>
     <!-- Centro notifiche-->
     <section id="notificationCenterContainer">
         <div id="notificationCenterTitle">
@@ -98,9 +98,9 @@
     <!-- Search Form -->
     <form name="search" method="get" id="search_module">
         <div id="searchType">
-            <h3>Stradale</h3>
+            <h3>Title</h3>
             <div>
-                <label id="subtypesLabel">Sottotipi</label>
+                <label id="subtypesLabels">Sottotipi</label>
                 <div id="SearchSubtypes">
                     <input id="incidente" class="css-checkbox subtype" type="checkbox" />
                     <label for="incidente" class="css-label">Incidente</label>
@@ -132,7 +132,7 @@
     <form name="report" method="post" id="report_module">
         <label for="ReporType">Tipologia</label>
         <select id="ReporType"></select>
-        <label for="ReportSubtype">Sottotipo</label>
+        <label for="ReportSubtype" id="subtypesLabel">Sottotipo</label>
         <select id="ReportSubtype"></select>
         <label for="description">Descrizione</label>
         <textarea id="description" placeholder="Inserisci una descrizione..."> </textarea>
