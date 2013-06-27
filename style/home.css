@@ -70,7 +70,7 @@ header nav div:first-child {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     height: 37px;
     display: block;
     width: 100%;
@@ -132,11 +132,6 @@ header nav li a {
 }
 nav ul form {
     position: relative;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
 }
 
 /* Stile dei un generico form */
