@@ -52,8 +52,11 @@
                 <li id="eventList">
                     <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" id="listShow"><div class="main_nav_label">Lista </div></a>
                 </li>
+                <li id="infoPage">
+                    <a href="info.html" title="Informazioni sul progetto" id="infoPageOpener"><div class="main_nav_label">Informazioni</div></a>
+                </li>
                 <li id="notification">
-                    <a href="#" title="Visualizza Centro Notifiche" id="notificationOpener">Notifiche</a>
+                    <a href="#" title="Visualizza Centro Notifiche" id="notificationOpener"><div class="main_nav_label">Notifiche</div></a>
                 </li>
             </ul>
         </div>
@@ -91,8 +94,8 @@
         <label for="dateEnd">Data Fine</label>
         <input id="dateEnd" class="date">
         <div class="buttonContainer">
-            <button type="reset">Cancella</button>
-            <button type="submit">Cerca</button>
+            <button type="reset" id="searchCancel">Cancella</button>
+            <button type="submit" id="searchSubmit">Cerca</button>
         </div>
     </form>
     <!-- Search Form End -->
@@ -107,8 +110,8 @@
         <select id="ReportSubtype"></select>
         <label for="description">Descrizione</label>
         <textarea id="description" placeholder="Inserisci una descrizione..."> </textarea>
-        <button type="reset">Cancella</button>
-        <button type="submit">Inserisci</button>
+        <button type="reset" id="reportCancel">Cancella</button>
+        <button type="submit" id="reportSubmit">Inserisci</button>
     </form>
     <!-- Report Form End -->
 </div>
@@ -126,6 +129,22 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
         </tbody>
     </table>
 </div>
