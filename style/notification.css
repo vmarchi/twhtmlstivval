@@ -13,9 +13,10 @@ li.notification {
 }
 
 #notificationCenterContainer {
-    height: 100%;
-    right: 0;
-    top: 58px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 800px;
     z-index:900;
     width: 250px;
     border: 1px solid #71b00c;

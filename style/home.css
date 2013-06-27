@@ -43,10 +43,18 @@ header nav {
 }
 
 #content {
-    position:absolute;
+    position:relative;
     top:58px;
     bottom:53px;
 }
+/* Regole che permettono il corretto posizionamento della mappa */
+#map-canvas
+{
+    position:absolute;
+    left:3px;
+    top: 2px;
+}
+
 
 header nav div:first-child {
     float: left;
