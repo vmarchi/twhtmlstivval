@@ -6,19 +6,23 @@ body {
     color:#141414;
     overflow-x: hidden;
 }
+
 #logo {
     float:left;
 }
+
 #logo a img
 {
     width: 120px;
     height: 50px;
 }
+
 a:visited
 {
     text-decoration: none;
     color:#e5e5e5;
 }
+
 header {
     position: absolute;
     height: 55px;
@@ -26,41 +30,49 @@ header {
     display: block;
     width: 100%;
 }
+
 header nav, footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.8)
 }
+
 header nav {
     display: inline-block;
     border-bottom: 2px solid #71b00c;
     position: absolute;
 }
+
 #content {
     position:absolute;
-    top:55px;
+    top:58px;
+    bottom:53px;
 }
+
 header nav div:first-child {
     float: left;
 }
 
-/*header nav div:nth-of-type(2) {
-    float:right;
-}*/
-
 footer {
-    padding: 10px;
+    position: absolute;
+    height: 37px;
+    display: block;
+    width: 100%;
+    bottom:0;
     text-align: center;
     border-top: 2px solid #71b00c;
 }
+
 footer a
 {
     text-decoration: none;
     color: #e5e5e5;
 }
+
 #welcomeMessage {
     display: block;
     height: 55px;
 }
+
 #welcomeMessage div{
     color: #E5E5E5;
     float:right;
@@ -68,12 +80,21 @@ footer a
     top:50%;
     margin-top: -9px;
     margin-right: 60px;
-
 }
+
+footer nav div{
+    color: #E5E5E5;
+    position:relative;
+    top:50%;
+    margin-top: 11px;
+    margin-right: 60px;
+}
+
 #menu {
     float:right;
     clear:right;
 }
+
 header nav ul { /* togliere nav*/
     padding: 0;
     margin: 0;
@@ -105,30 +126,38 @@ footer {
 li div.toggler {
     margin-top: 3px;
 }
+
 .ui-widget-content {
     text-align: center;
 }
+
 .ui-dialog .ui-dialog-title  {
     width: 100%;
 }
+
 form * {
     display:block;
 }
+
 div form input, div form select, div form textarea {
     margin: 3px auto;
     min-height: 26px;
 }
+
 form button {
     margin: 10px 0;
     display: inline-block;
 }
+
 /* Stile dei bottoni */
 button span {
     font-size: 13px;
 }
+
 .buttonContainer {
     display: inline-table;
 }
+
 /*Stile del menu */
 header nav div.main_nav_label {
     display: none;
@@ -144,9 +173,11 @@ header nav div.main_nav_label {
     padding: 5px 5px 9px 5px;
     height: 10px;
 }
+
 header nav div.main_nav_label:hover {
     display: block;
 }
+
 header nav li a
 {
     min-width: 40px;
@@ -161,83 +192,105 @@ header nav li a
     position: relative;
     margin: 0 1px;
 }
+
 /* Icone e relativi effetti */
 /* Login */
 a#loginDropdown {
     background:url("images/loginUserWhite.png") center no-repeat black;
 }
+
 a#loginDropdown:hover {
     background:url("images/loginUserWhite.png") center no-repeat green;
 }
+
 a#loginDropdown:active {
     background: white;
 }
+
 /* Nuova Segnalazione */
 a#reportShow {
     background:url("images/segnalaWhite.png") center no-repeat black;
 }
+
 a#reportShow:hover {
     background:url("images/segnalaWhite.png") center no-repeat green;
 }
+
 a#reportShow:active {
     background: white;
 }
+
 /* Ricerca */
 a#searchShow {
     background:url("images/searchWhite.png") center no-repeat black;
 }
+
 a#searchShow:hover {
     background:url("images/searchWhite.png") center no-repeat green;
 }
+
 a#searchShow:active {
     background: white;
 }
+
 /* Lista */
 a#listShow{
     background:url("images/listWhite.png") center no-repeat black;
 }
+
 a#listShow:hover {
     background:url("images/listWhite.png") center no-repeat green;
 }
+
 a#listShow:active {
     background: white;
 }
+
 /* Pagina delle informazioni */
 a#infoPageOpener{
     background:url("images/infoButton.png") center no-repeat black;
     background-size: 37px 37px;
 }
+
 a#infoPageOpener:hover {
     background:url("images/infoButton.png") center no-repeat green;
     background-size: 37px 37px;
 }
+
 a#infoPageOpener:active {
     background: white;
 }
+
 /* Centro Notifiche */
 a#notificationOpener{
     background:url("images/notificationButton.png") center no-repeat black;
     background-size: 37px 37px;
 }
+
 a#notificationOpener:hover {
     background:url("images/notificationButton.png") center no-repeat green;
     background-size: 37px 37px;
 }
+
 a#notificationOpener:active {
     background: white;
 }
+
 /* Home Button */
 a#homeOpener{
     background:url("images/homeButtonWhite.png") center no-repeat black;
     background-size: 37px 37px;
 }
+
 a#homeOpener:hover {
     background:url("images/homeButtonWhite.png") center no-repeat green;
     background-size: 37px 37px;
 }
+
 a#homeOpener:active {
     background: white;
 }
+
 /* Form di Login*/
 #username,#password {
     padding-left: 32px;
@@ -245,21 +298,22 @@ a#homeOpener:active {
     min-width: 119px;
     font-size: 13px;
 }
+
 #username {
     background: url("images/loginUserBlack.png") left  no-repeat transparent;
     background-size: 27px 27px;
 }
+
 #password {
     background: url("images/loginPassword.png") left  no-repeat transparent;
     background-size: 27px 27px;
 }
 
 /* Form di ricerca */
-select
-{
+select {
     width: 150px;
 }
-input
-{
+
+input {
     width:150px;
 }

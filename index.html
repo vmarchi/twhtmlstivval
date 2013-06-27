@@ -190,9 +190,9 @@
                             <!-- Test Form Login -->
                             <form name="login" method="post" id="login_module">
                                 <label for="username">Username</label>
-                                <input id="username" type="email" name="username" placeholder="your@mail.com" required>
+                                <input id="username" type="email" name="username" placeholder="Nome Utente" required>
                                 <label for="password">Password</label>
-                                <input id="password" type="password" name="password" placeholder="password" required>
+                                <input id="password" type="password" name="password" placeholder="Password" required>
                                 <label for="selectServer">Server</label>
                                 <select id="selectServer"></select>
                                 <button id="loginButton" type="submit">Login</button>
@@ -249,7 +249,9 @@
 </div>
 <footer>
     <nav>
-        <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
+        <div>
+            <a href="info.html" title="Info Gruppo Stark">Gruppo STARK</a>
+        </div>
     </nav>
 </footer>
 <!-- Dialog di ricerca di un elemento -->
@@ -272,6 +274,7 @@
         </div>
         <label for="radius">Raggio</label>
         <input type="text" id="radius" placeholder="Raggio (km)">
+        <div id ></div>
         <label for="dateStart">Data Inizio</label>
         <input id="dateStart" class="date">
         <label for="dateEnd">Data Fine</label>

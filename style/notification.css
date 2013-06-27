@@ -4,7 +4,6 @@ section ul {
 }
 
 li.notification {
-    position: relative;
     float: left;
     list-style-type: none;
     width: 100%;
@@ -12,12 +11,14 @@ li.notification {
     border-bottom: 1px solid;
     padding-bottom: 3px;
 }
+
 #notificationCenterContainer {
-    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 58px;
     z-index:900;
-    float: right;
     width: 250px;
-    border: 1px solid;
+    border: 1px solid #71b00c;
     background-image: url('images/sfondoChiaro.png');
     color: #E5E5E5;
     padding: 7px 10px 5px 10px;
@@ -26,14 +27,12 @@ li.notification {
 
 #type {
     float: left;
-
     font-weight: bold;
     font-size: 0.9em;
 }
 
 #notificationStatus {
     float: right;
-
     font-weight: bold;
     font-size: 0.9em;
     margin-right: 4px;
@@ -45,15 +44,16 @@ li.notification {
     clear: left;
     font-size: 0.8em;
 }
+
 #nroNotific::before {
     content:"N.ro Notifiche: ";
 }
-
 
 #reliability {
     float: right;
     font-size: 0.8em;
 }
+
 #reliability::before {
     content:"Affidabilità: ";
 }
@@ -68,6 +68,7 @@ li.notification {
     float: right;
     font-size: 0.8em;
 }
+
 #notificationCenterTitle {
     background-image: url('images/sfondoScuro.png');
     background-repeat: repeat;
