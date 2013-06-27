@@ -306,11 +306,15 @@ a#homeOpener:active {
 }
 
 /* Form di Login*/
+#login {
+    z-index:3;
+}
 #username,#password {
     padding-left: 32px;
     background:left;
     min-width: 119px;
     font-size: 13px;
+
 }
 
 #username {
@@ -324,8 +328,9 @@ a#homeOpener:active {
 }
 
 /* Form di ricerca */
-#datePickForm label, #datePickForm input {
+#datePickForm label, #datePickForm input, #remoteSearchContainer input, #remoteSearchContainer label {
     display:inline;
+    text-align: center;
 }
 #searchType {
     width: 400px;
