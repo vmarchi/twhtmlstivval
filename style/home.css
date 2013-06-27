@@ -1,3 +1,6 @@
+html {
+    width: 100%;
+}
 body {
     margin: 0;
     background: #e5e5e5;
@@ -5,8 +8,8 @@ body {
     font-size: 13px;
     color:#141414;
     overflow-x: hidden;
+    width:100%
 }
-
 #logo {
     float:left;
 }
@@ -54,6 +57,8 @@ header nav {
     left:3px;
     top: 2px;
     height: 800px;
+    width:100%;
+    background: white;
 }
 
 
