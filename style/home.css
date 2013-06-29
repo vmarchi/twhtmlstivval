@@ -344,3 +344,6 @@ header nav li a {
 #refresh {
 
 }
+.infoWindowTitle {
+    font-weight: bold;
+}
