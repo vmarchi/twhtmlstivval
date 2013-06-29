@@ -17,7 +17,7 @@
     <!-- Menu -->
     <nav>
         <div id="logo">
-            <a href="index.html" title="Vai alla Homepage"><img src="#" alt="CityNotifier"/></a>
+            <a href="index.html" title="Vai alla Homepage"><img src="#" width="120" height="50" alt="CityNotifier"/></a>
         </div>
         <div id="menu">
             <ul>
@@ -41,6 +41,9 @@
                     </div>
                     <!-- fine div di login -->
                 </li>
+                <li id="refresh">
+                    <a href="#" title="Aggiorna la Mappa" id="refreshShow"><div class="main_nav_label">Aggiorna</div></a>
+                </li>
                 <li id="search">
                     <a href="#" title="Cerca Situazioni" id="searchShow"><div class="main_nav_label">Cerca</div></a>
                 </li>
@@ -60,7 +63,7 @@
         </div>
         <div id="welcomeMessage">
             <div>
-                <span>Benvenuto, sei registrato come:</span>
+                <p>Benvenuto </p>
                 <span id="user"></span>
             </div>
         </div>
@@ -77,11 +80,11 @@
         <ul>
             <li class="notification">
                 <span id="type" title="Tipo">Incidente</span>
-                <span id="notificationStatus" title="Stato">aperto</span>
-                <span id="nroNotific" title="Numero Notifiche">2</span>
-                <span id="reliability" title="Affidabilità">0.8</span>
-                <span id="creationDate" title="Data Creazione">14/10/1203</span>
-                <span id="freshness" title="Freschezza">2 giorni</span>
+                <span id="notificationStatus" title="Stato"></span>
+                <span id="nroNotific" title="Numero Notifiche"></span>
+                <span id="reliability" title="Affidabilit&agrave;"></span>
+                <span id="creationDate" title="Data Creazione"></span>
+                <span id="freshness" title="Freschezza"></span>
             </li>
         </ul>
     </section>
@@ -119,6 +122,10 @@
             <label for="dateEnd">al</label>
             <input id="dateEnd" class="date">
         </div>
+        <div id="remoteSearchContainer">
+            <label for="remoteSearch">Ottieni risultati anche dagli altri server</label>
+            <input id="remoteSearch" type=checkbox checked>
+        </div>
         <div class="buttonContainer">
             <button type="reset" id="searchCancel">Cancella</button>
             <button type="submit" id="searchSubmit">Cerca</button>
@@ -147,30 +154,14 @@
         <thead>
         <tr>
             <th>Tipo > Sottotipo</th>
-            <th>Data</th>
-            <th>Via</th>
-            <th>Descrizioni</th>
-            <th>Credibilit&agrave;</th>
             <th>Stato</th>
+            <th>Affidabilit&agrave; (&#37;)</th>
+            <th>N.ro Notifice</th>
+            <th>Creata il</th>
+            <th>Ultima Segnalazione</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
         </tbody>
     </table>
 </div>
