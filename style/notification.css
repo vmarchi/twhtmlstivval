@@ -24,6 +24,7 @@ li.notification {
     color: #E5E5E5;
     padding: 7px 10px 5px 10px;
     border-radius: 6px; /* TODO valutare se togliere il bordo arrotondato */
+    overflow: auto;
 }
 
 #type {
