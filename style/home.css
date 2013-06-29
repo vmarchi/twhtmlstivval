@@ -182,109 +182,59 @@ header nav li a
     margin: 0 1px;
 }
 
-/* TODO start
- * Sistemare a e a:active sotto li al posto di #id
- */
+/* Menu Icons */
+#menu li a {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: 37px 37px;
+}
+
+#menu li a:hover {
+    background-color: green;
+}
+
+#menu li a:active {
+    background-color: white;
+}
 /* Icone e relativi effetti */
 /* Login */
 #login a {
-    background:url("images/loginUserWhite.png") center no-repeat black;
-}
-
-#login a:hover {
-    background:url("images/loginUserWhite.png") center no-repeat green;
-}
-
-#login a:active {
-    background: white;
+    background-image:url("images/loginUserWhite.png");
 }
 
 /* Ricerca */
 #search a {
-    background:url("images/searchWhite.png") center no-repeat black;
-}
-
-#search a:hover {
-    background:url("images/searchWhite.png") center no-repeat green;
-}
-
-#search a:active {
-    background: white;
+    background-image:url("images/searchWhite.png");
 }
 
 /* Nuova Segnalazione */
 #report a {
-    background:url("images/segnalaWhite.png") center no-repeat black;
-}
-
-#report a:hover {
-    background:url("images/segnalaWhite.png") center no-repeat green;
-}
-
-#report a:active {
-    background: white;
+    background-image:url("images/segnalaWhite.png");
 }
 
 /* Event List */
 #eventList a {
-    background:url("images/listWhite.png") center no-repeat black;
-}
-
-#eventList a:hover {
-    background:url("images/listWhite.png") center no-repeat green;
-}
-
-#eventList a:active {
-    background: white;
+    background-image:url("images/listWhite.png");
 }
 
 /* Pagina delle informazioni */
 #infoPage a {
-    background:url("images/infoButton.png") center no-repeat black;
-    background-size: 37px 37px;
-}
+    background-image:url("images/infoButton.png");
 
-#infoPage a:hover {
-    background:url("images/infoButton.png") center no-repeat green;
-    background-size: 37px 37px;
-}
-
-#infoPage a:active {
-    background: white;
 }
 
 /* Centro Notifiche */
 #notification a {
-    background:url("images/notificationButton.png") center no-repeat black;
-    background-size: 37px 37px;
-}
-
-#notification a:hover {
-    background:url("images/notificationButton.png") center no-repeat green;
-    background-size: 37px 37px;
-}
-
-#notification a:active {
-    background: white;
+    background-image:url("images/notificationButton.png");
 }
 
 /* Home Button */
-a#homeOpener{
-    background:url("images/homeButtonWhite.png") center no-repeat black;
-    background-size: 37px 37px;
+#home a{
+    background-image:url("images/homeButtonWhite.png");
 }
+/* End Menu Icons*/
 
-a#homeOpener:hover {
-    background:url("images/homeButtonWhite.png") center no-repeat green;
-    background-size: 37px 37px;
-}
-
-a#homeOpener:active {
-    background: white;
-}
-/* TODO Stop
- * Sistemare a e a:active sotto li al posto di #id
- */
 /* Form di Login*/
 #login {
     z-index:3;
