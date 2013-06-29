@@ -16,12 +16,6 @@ body {
     float:left;
 }
 
-#logo a img
-{
-    width: 120px;
-    height: 50px;
-}
-
 a:visited
 {
     text-decoration: none;
@@ -87,7 +81,6 @@ footer a
 }
 
 #welcomeMessage {
-    display: block;
     height: 55px;
 }
 
@@ -100,6 +93,10 @@ footer a
     margin-right: 60px;
 }
 
+#welcomeMessage p{
+    display: inline;
+}
+
 footer nav div{
     color: #E5E5E5;
     position:relative;
@@ -108,26 +105,6 @@ footer nav div{
     margin-right: 60px;
 }
 
-#menu {
-    float:right;
-    clear:right;
-}
-
-header nav ul { /* togliere nav*/
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li { /* togliere nav*/
-    position: relative;
-    float: left;
-    list-style-type: none;
-}
-
-header nav li a {
-    color: #e5e5e5;
-    text-decoration: none;
-}
 .toggler {
     position: absolute;
 }
@@ -340,4 +317,31 @@ select {
 
 input {
     width:150px;
+}
+
+/* menu */
+#menu {
+    float:right;
+    clear:right;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    position: relative;
+    float: left;
+    list-style-type: none;
+}
+
+header nav li a {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+/* Menu buttons */
+#refresh {
+
 }
