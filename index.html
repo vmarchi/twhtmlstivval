@@ -5,7 +5,11 @@
     <title>Gruppo Stark | City Notifier</title>
     <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js" type="text/javascript"></script>
     <script src="lib/jquery-ui-1.10.3/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-    <script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+    <script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="js/effects.js" type="text/javascript"></script>
+    <script src="js/listeners.js" type="text/javascript"></script>
+    <script src="js/loaderDesktop.js" type="text/javascript"></script>
+    <script src="js/requestHandler.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="style/jquery-ui-1.10.3.custom.min.css"/>
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
     <link rel="stylesheet" type="text/css" href="style/home.css"/>
@@ -257,7 +261,7 @@
     <!-- Centro notifiche-->
     <section id="notificationCenterContainer">
         <div id="notificationCenterTitle">
-            <h1>Centro Notifiche</h1>
+            <h1>Ultimi Eventi</h1>
         </div>
         <ul>
             <li class="notification">
@@ -298,6 +302,7 @@
         </div>
         <label for="radius">Raggio</label>
         <input type="text" id="radius" placeholder="Raggio (km)">
+       <div id="slider-range-min"></div>
         <div id="datePickForm">
             <label for="dateStart">Dal</label>
             <input id="dateStart" class="date">
