@@ -27,13 +27,13 @@ li.notification {
     overflow: auto;
 }
 
-#type {
+.type {
     float: left;
     font-weight: bold;
     font-size: 0.9em;
 }
 
-#notificationStatus {
+.notificationStatus {
     float: right;
     font-weight: bold;
     font-size: 0.9em;
@@ -41,26 +41,26 @@ li.notification {
     position: relative;
 }
 
-#nroNotific {
+.nroNotific {
     float: left;
     clear: left;
     font-size: 0.8em;
 }
 
-#nroNotific::before {
+.nroNotific::before {
     content:"N.ro Notifiche: ";
 }
 
-#reliability {
+.reliability {
     float: right;
     font-size: 0.8em;
 }
 
-#reliability::before {
+.reliability::before {
     content:"Affidabilità: ";
 }
 
-#creationDate {
+.creationDate {
     float: left;
     clear: right;
     font-size: 0.8em;
