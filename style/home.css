@@ -147,7 +147,31 @@ button span {
     display: inline-table;
 }
 
-/*Stile del menu */
+/*
+ * Stile del menu
+ */
+#menu {
+    float:right;
+    clear:right;
+    margin-right: 5px;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    position: relative;
+    float: left;
+    list-style-type: none;
+}
+
+header nav li a {
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
 header nav div.main_nav_label {
     display: none;
     font-size: 12px;
@@ -182,7 +206,7 @@ header nav li a
     margin: 0 1px;
 }
 
-/* Menu Icons */
+/* Menu Buttons */
 #menu li a {
     background-position: center;
     background-repeat: no-repeat;
@@ -201,6 +225,11 @@ header nav li a
 /* Login */
 #login a {
     background-image:url("images/loginUserWhite.png");
+}
+
+/* Refresh pagina */
+#refresh a{
+    background-image:url("images/refresh-icon.png");
 }
 
 /* Ricerca */
@@ -226,7 +255,7 @@ header nav li a
 
 /* Centro Notifiche */
 #notification a {
-    background-image:url("images/notificationButton.png");
+    background-image:url("images/notifiche.png");
 }
 
 /* Home Button */
@@ -273,38 +302,8 @@ input {
     width:150px;
 }
 
-/* menu */
-#menu {
-    float:right;
-    clear:right;
-}
-
-header ul {
-    padding: 0;
-    margin: 0;
-}
-
-header ul li {
-    position: relative;
-    float: left;
-    list-style-type: none;
-}
-
-header nav li a {
-    color: #e5e5e5;
-    text-decoration: none;
-}
-
-/* Menu buttons */
-#refresh {
-
-}
 .infoWindowTitle {
     font-weight: bold;
-}
-
-#effectSearch {
-    min-width: 450px;
 }
 
 /* Reports Widget */
@@ -331,4 +330,8 @@ div[aria-describedby="effectReports"] {
 div[aria-describedby="effectSearch"] {
     min-width: 460px;
     min-height: 250px;
+}
+
+#effectSearch {
+    min-width: 450px;
 }
