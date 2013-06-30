@@ -341,3 +341,16 @@ div[aria-describedby="effectSearch"] {
 #SearchSubtypes label {
 
 }
+
+/* loggedUser */
+#loggedUser {
+    font-weight: bold;
+    margin: 5px 5px 5px;
+    text-align: left;
+    display: block;
+}
+
+#effectLogin p {
+    margin: 5px 5px 6px;
+    display: inline-block;
+}
