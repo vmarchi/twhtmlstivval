@@ -305,6 +305,9 @@ input {
 .infoWindowTitle {
     font-weight: bold;
 }
+#slider-range-min {
+    width:400px;
+}
 
 /* Reports Widget */
 div[aria-describedby="effectReports"] {
@@ -329,9 +332,12 @@ div[aria-describedby="effectReports"] {
 /* Search Widget */
 div[aria-describedby="effectSearch"] {
     min-width: 460px;
-    min-height: 250px;
+    min-height: 500px;
 }
 
 #effectSearch {
     min-width: 450px;
+}
+#SearchSubtypes label {
+
 }
