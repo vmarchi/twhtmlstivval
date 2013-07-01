@@ -357,7 +357,10 @@ div[aria-describedby="effectSearch"] {
 }
 
 .disabled {
-    -webkit-opacity: 0.5;
-    -moz-opacity: 0.5;
-    filter:alpha(opacity=50);
+    -webkit-opacity: 0.2;
+    -moz-opacity: 0.2;
+    -khtml-opacity:.20;
+    -ms-filter:"alpha(opacity=20)";
+    filter:alpha(opacity=20);
+    opacity:.20;
 }
