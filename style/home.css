@@ -306,7 +306,8 @@ input {
     font-weight: bold;
 }
 #slider-range-min {
-    width:400px;
+    width: 100%;
+    padding: 5px 20px 5px 20px;
 }
 
 /* Reports Widget */
@@ -353,4 +354,10 @@ div[aria-describedby="effectSearch"] {
 #effectLogin p {
     margin: 5px 5px 6px;
     display: inline-block;
+}
+
+.disabled {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter:alpha(opacity=50);
 }
