@@ -12,6 +12,10 @@
     height: 100%;
     padding: 0.4em;
 }
+#effectSearch
+{
+    min-height: 312px !important;
+}
 .ui-dialog
 {
     min-width: 830px;

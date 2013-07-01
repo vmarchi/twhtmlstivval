@@ -197,6 +197,11 @@
             });
         });
     </script>
+    <script>
+        $(function() {
+            $( "#slider-range-min" ).slider();
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -301,8 +306,10 @@
             </div>
         </div>
         <label for="radius">Raggio</label>
-        <input type="text" id="radius" placeholder="Raggio (km)">
-       <div id="slider-range-min"></div>
+        <div id="radiusForm">
+            <input type="text" id="radius" placeholder="Raggio (km)">
+            <div id="slider-range-min"></div>
+        </div>
         <div id="datePickForm">
             <label for="dateStart">Dal</label>
             <input id="dateStart" class="date">

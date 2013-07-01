@@ -118,6 +118,7 @@ li div.toggler {
 
 .ui-widget-content {
     text-align: center;
+    margin: 0 auto;
 }
 
 .ui-dialog .ui-dialog-title  {
@@ -179,7 +180,7 @@ header nav div.main_nav_label {
     color: #EEE;
     position: absolute;
     bottom: 46px;
-    left: 0px;
+    left: 0;
     text-align: left;
     font-weight: 300;
     background: url("images/tip.png") left bottom no-repeat;
@@ -286,9 +287,20 @@ header nav li a
 }
 
 /* Form di ricerca */
-#datePickForm label, #datePickForm input, #remoteSearchContainer input, #remoteSearchContainer label {
-    display:inline;
+form#search {
+    width: 57%;
+    margin: 0 auto;
+}
+#datePickForm label, #datePickForm input, #remoteSearchContainer input, #remoteSearchContainer label,
+#radiusForm div, #radiusForm input {
+    display:inline-block;
     text-align: center;
+}
+#radiusForm input {
+    margin-right: 10px;
+}
+#remoteSearch {
+    width: 15px;
 }
 #searchType {
     width: 400px;
@@ -306,10 +318,8 @@ input {
     font-weight: bold;
 }
 #slider-range-min {
-    width: 100%;
-    padding: 5px 20px 5px 20px;
+    width: 100px;
 }
-
 /* Reports Widget */
 div[aria-describedby="effectReports"] {
     min-width: 400px;
