@@ -4,7 +4,6 @@ html {
 }
 body {
     margin: 0;
-    background: #e5e5e5;
     font-family: Helvetica, Arial, Verdana, sans-serif;
     font-size: 13px;
     color:#141414;
@@ -33,13 +32,14 @@ header {
 
 header nav, footer {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8)
+    /*background: rgba(0, 0, 0, 0.8)*/
 }
 
 header nav {
     display: inline-block;
     border-bottom: 2px solid #71b00c;
     position: absolute;
+    background-color: #EEE;
 }
 
 #content {
@@ -83,8 +83,7 @@ footer a
     height: 55px;
 }
 
-#welcomeMessage div{
-    color: #E5E5E5;
+#welcomeMessage div {
     float:right;
     position:relative;
     top:50%;
@@ -195,7 +194,7 @@ header nav div.main_nav_label:hover {
 header nav li a
 {
     min-width: 40px;
-    height: 40px;
+    height: 40px;   /*TODO*/
     padding: 5px;
     line-height: 40px;
     font-size: 1.5em;
@@ -211,8 +210,8 @@ header nav li a
 #menu li a {
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
-    background-size: 37px 37px;
+    /*background-color: black;*/
+    /*background-size: 37px 37px;*/
 }
 
 #menu li a:hover {
@@ -225,43 +224,38 @@ header nav li a
 /* Icone e relativi effetti */
 /* Login */
 #login a {
-    background-image:url("images/loginUserWhite.png");
-}
-
-/* Refresh pagina */
-#refresh a{
-    background-image:url("images/refresh-icon.png");
+    background-image: url("images/user.svg");
 }
 
 /* Ricerca */
 #search a {
-    background-image:url("images/searchWhite.png");
+    background-image: url("images/magnifying_glass.svg");
 }
 
 /* Nuova Segnalazione */
 #report a {
-    background-image:url("images/segnalaWhite.png");
+    background-image: url("images/pin.svg");
 }
 
 /* Event List */
 #eventList a {
-    background-image:url("images/listWhite.png");
+    background-image: url("images/list.svg");
 }
 
 /* Pagina delle informazioni */
 #infoPage a {
-    background-image:url("images/infoButton.png");
+    background-image: url("images/info.svg");
 
 }
 
 /* Centro Notifiche */
 #notification a {
-    background-image:url("images/notifiche.png");
+    background-image: url("images/notifiche.svg");
 }
 
 /* Home Button */
 #home a{
-    background-image:url("images/homeButtonWhite.png");
+    background-image:url("images/home.svg");
 }
 /* End Menu Icons*/
 
@@ -373,4 +367,8 @@ div[aria-describedby="effectSearch"] {
     -ms-filter:"alpha(opacity=20)";
     filter:alpha(opacity=20);
     opacity:.20;
+}
+/* logged */
+#user {
+    font-weight: bold;
 }
