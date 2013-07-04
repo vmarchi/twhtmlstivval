@@ -18,7 +18,7 @@ body {
 a:visited
 {
     text-decoration: none;
-    color:#e5e5e5;
+    color:#141414;
 }
 
 header {
@@ -76,7 +76,7 @@ footer {
 footer a
 {
     text-decoration: none;
-    color: #e5e5e5;
+    color: #141414;
 }
 
 #welcomeMessage {
@@ -165,6 +165,7 @@ header ul li {
     position: relative;
     float: left;
     list-style-type: none;
+    border:1px solid #000000;
 }
 
 header nav li a {
@@ -173,30 +174,22 @@ header nav li a {
 }
 
 header nav div.main_nav_label {
-    display: none;
     font-size: 12px;
-    line-height: 9px;
-    color: #EEE;
+    color: #222;
     position: absolute;
-    bottom: 46px;
     left: 0;
-    text-align: left;
     font-weight: 300;
-    background: url("images/tip.png") left bottom no-repeat;
-    padding: 5px 5px 9px 5px;
-    height: 10px;
-}
-
-header nav div.main_nav_label:hover {
-    display: block;
+    /* background: url("images/tip.png") left bottom no-repeat; */
+    top:42px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 header nav li a
 {
-    min-width: 40px;
+    min-width: 60px;
     height: 40px;   /*TODO*/
-    padding: 5px;
-    line-height: 40px;
     font-size: 1.5em;
     display: inline-block;
     outline: 0;
@@ -214,11 +207,11 @@ header nav li a
     /*background-size: 37px 37px;*/
 }
 
-#menu li a:hover {
+#menu li:hover {
     background-color: green;
 }
 
-#menu li a:active {
+#menu li:active {
     background-color: white;
 }
 /* Icone e relativi effetti */
