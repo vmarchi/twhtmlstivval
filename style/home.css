@@ -112,7 +112,7 @@ nav ul form {
 
 /* Stile dei un generico form */
 li div.toggler {
-    margin-top: 3px;
+    margin-top: 14px;
 }
 
 .ui-widget-content {
@@ -165,7 +165,8 @@ header ul li {
     position: relative;
     float: left;
     list-style-type: none;
-    border:1px solid #000000;
+    height: 55px;
+    margin-right:4px;
 }
 
 header nav li a {
@@ -208,7 +209,7 @@ header nav li a
 }
 
 #menu li:hover {
-    background-color: green;
+    background-color: #71b00c;
 }
 
 #menu li:active {
