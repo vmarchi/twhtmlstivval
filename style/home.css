@@ -71,8 +71,8 @@ footer {
     bottom:0;
     text-align: center;
     border-top: 2px solid #71b00c;
+    background-color: #EEE;
 }
-
 footer a
 {
     text-decoration: none;
@@ -100,7 +100,7 @@ footer nav div{
     position:relative;
     top:50%;
     margin-top: 11px;
-    margin-right: 60px;
+    width:100%;
 }
 
 .toggler {
@@ -181,7 +181,7 @@ header nav div.main_nav_label {
     left: 0;
     font-weight: 300;
     /* background: url("images/tip.png") left bottom no-repeat; */
-    top:42px;
+    top:40px;
     margin: 0 auto;
     text-align: center;
     width: 100%;
