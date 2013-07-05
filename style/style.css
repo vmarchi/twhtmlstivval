@@ -16,16 +16,10 @@
 {
     min-height: 312px !important;
 }
-.ui-dialog
-{
-    min-width: 830px;
-    min-height: 320px;
-    padding: 0 0;
-}
-
 #effectList
 {
-    height: 100%;
+    min-width: 850px;
+    min-height: 400px !important;
 }
 /* Stile del checkbox */
 input[type=checkbox].css-checkbox {

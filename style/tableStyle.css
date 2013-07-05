@@ -4,7 +4,6 @@ table
     width:95%;
     height:95%;
     text-transform: capitalize;
-    box-shadow: 6px 8px 17px #888;
     margin: 10px 10px;
 }
 th
@@ -82,7 +81,7 @@ td input.button
     min-width:80px;
 }
 table {
-    *border-collapse: collapse; /* IE7 and lower */
+    border-collapse: collapse; /* IE7 and lower */
     border-spacing: 0;
     border-color: #000000;
 }
@@ -129,18 +128,12 @@ th:only-child{
 }
 .dataTables_paginate a
 {
-    font: bold 11px Arial;
     text-decoration: none;
-    background-color: #EEEEEE;
-    color: #333333;
+    border: 1px solid #d3d3d3;
+    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+    font-weight: normal;
+    color: #555;
     padding: 2px 6px 2px 6px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    border-left: 1px solid #CCCCCC;
+    border-radius:6px;
     margin-right: 10px;
-}
-.paginate_disabled_previous
-{
-
 }

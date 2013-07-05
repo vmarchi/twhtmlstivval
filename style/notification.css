@@ -14,16 +14,16 @@ li.notification {
 
 #notificationCenterContainer {
     position: absolute;
-    top: 2px;
+    top: 3px;
     right: 2px;
-    height:100%;
+    bottom:3px;
     z-index:900;
     width: 250px;
     border: 1px solid #71b00c;
     background-image: url('images/sfondoChiaro.png');
     color: #E5E5E5;
     padding: 7px 10px 5px 10px;
-    border-radius: 6px; /* TODO valutare se togliere il bordo arrotondato */
+    border-radius: 6px;
     overflow: auto;
 }
 
@@ -72,10 +72,9 @@ li.notification {
 }
 
 #notificationCenterTitle {
-    background-image: url('images/sfondoScuro.png');
-    background-repeat: repeat;
-    padding: 2px;
-    border-radius: 16px; /* TODO valutare se togliere il bordo arrotondato */
+    background: url('images/sfondoScuro.png') repeat;
+    padding: 4px;
+    border-radius: 6px;
 }
 
 #notificationCenterTitle h1 {

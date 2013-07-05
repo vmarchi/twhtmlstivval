@@ -2,6 +2,7 @@ html {
     width: 100%;
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: Helvetica, Arial, Verdana, sans-serif;
@@ -11,78 +12,34 @@ body {
     width:100%;
     height: 100%;
 }
-#logo {
-    float:left;
-}
-
-a:visited
-{
-    text-decoration: none;
-    color:#141414;
+/* Stile dell'header */
+header, footer {
+    width: 100%;
+    min-width:770px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
+    background-color: #EEE;
+    display:block;
 }
 
 header {
     position: absolute;
     height: 55px;
     top: 0;
-    display: block;
-    width: 100%;
-    min-width:750px;
-}
-
-header nav, footer {
-    width: 100%;
-    /*background: rgba(0, 0, 0, 0.8)*/
+    border-bottom: 2px solid #71b00c;
 }
 
 header nav {
     display: inline-block;
-    border-bottom: 2px solid #71b00c;
-    position: absolute;
-    background-color: #EEE;
-}
-
-#content {
-    position:absolute;
-    top:58px;
-    bottom:55px;
-    width: 100%;
-}
-/* Regole che permettono il corretto posizionamento della mappa */
-#map-canvas
-{
-    position:absolute;
-    left:3px;
-    top: 2px;
     width:100%;
-    height:100%;
 }
 
-
-header nav div:first-child {
-    float: left;
-}
-
-footer {
-    position: fixed;
-    height: 37px;
-    display: block;
-    width: 100%;
-    bottom:0;
-    text-align: center;
-    border-top: 2px solid #71b00c;
-    background-color: #EEE;
-}
-footer a
-{
-    text-decoration: none;
-    color: #141414;
+#logo {
+    float:left;
 }
 
 #welcomeMessage {
     height: 55px;
 }
-
+/* Per poter centrare il div in altezza occorre incapsularlo in un altro div e centrare quest'ultimo rispetto a suo padre */
 #welcomeMessage div {
     float:right;
     position:relative;
@@ -95,12 +52,47 @@ footer a
     display: inline;
 }
 
+/*Stile del footer */
+footer {
+    position: fixed;
+    height: 37px;
+    bottom:0;
+    text-align: center;
+    border-top: 2px solid #71b00c;
+}
+footer a
+{
+    text-decoration: none;
+    color: #141414;
+}
+
 footer nav div{
-    color: #E5E5E5;
     position:relative;
     top:50%;
     margin-top: 11px;
     width:100%;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color:#141414;
+}
+
+#content {
+    position:absolute;
+    top:55px;
+    bottom:37px;
+    width: 100%;
+}
+/* Regole che permettono il corretto posizionamento della mappa */
+#map-canvas
+{
+    position:absolute;
+    left:3px;
+    top: 2px;
+    width:100%;
+    height:100%;
 }
 
 .toggler {
@@ -201,13 +193,6 @@ header nav li a
 }
 
 /* Menu Buttons */
-#menu li a {
-    background-position: center;
-    background-repeat: no-repeat;
-    /*background-color: black;*/
-    /*background-size: 37px 37px;*/
-}
-
 #menu li:hover {
     background-color: #71b00c;
 }
@@ -218,38 +203,38 @@ header nav li a
 /* Icone e relativi effetti */
 /* Login */
 #login a {
-    background-image: url("images/user.svg");
+    background: url("images/user.svg") center no-repeat;
 }
 
 /* Ricerca */
 #search a {
-    background-image: url("images/magnifying_glass.svg");
+    background: url("images/magnifying_glass.svg") center no-repeat;
 }
 
 /* Nuova Segnalazione */
 #report a {
-    background-image: url("images/pin.svg");
+    background: url("images/pin.svg") center no-repeat;
 }
 
 /* Event List */
 #eventList a {
-    background-image: url("images/list.svg");
+    background: url("images/list.svg") center no-repeat;
 }
 
 /* Pagina delle informazioni */
 #infoPage a {
-    background-image: url("images/info.svg");
+    background: url("images/info.svg") center no-repeat;
 
 }
 
 /* Centro Notifiche */
 #notification a {
-    background-image: url("images/notifiche.svg");
+    background: url("images/notifiche.svg") center no-repeat;
 }
 
 /* Home Button */
 #home a{
-    background-image:url("images/home.svg");
+    background:url("images/home.svg") center no-repeat;
 }
 /* End Menu Icons*/
 
@@ -340,7 +325,11 @@ div[aria-describedby="effectSearch"] {
 #SearchSubtypes label {
 
 }
-
+/* List Widget */
+div[aria-labelledby="ui-id-2"] {
+    min-width: 900px;
+    min-height: 500px;
+}
 /* loggedUser */
 #loggedUser {
     font-weight: bold;
@@ -362,7 +351,19 @@ div[aria-describedby="effectSearch"] {
     filter:alpha(opacity=20);
     opacity:.20;
 }
+
 /* logged */
 #user {
     font-weight: bold;
+}
+
+/* Stile della lista di eventi */
+#effectList * {
+    margin: 10px auto;
+}
+select[name="eventListTable_length"]{
+    width: 55px;
+}
+div.paging_two_button a {
+    margin:10px 10px !important;
 }
