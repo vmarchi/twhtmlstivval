@@ -16,7 +16,7 @@ body {
 /* Stile dell'header */
 header, footer {
     width: 100%;
-    min-width:770px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
+    min-width:900px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
     background-color: #e8e8e8;
     display:block;
 }
@@ -346,6 +346,7 @@ div[aria-labelledby="ui-id-2"] {
 }
 
 .disabled {
+    /* TODO: not W3C compliant! */
     -webkit-opacity: 0.2;
     -moz-opacity: 0.2;
     -khtml-opacity:.20;
