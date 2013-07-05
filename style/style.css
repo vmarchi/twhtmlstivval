@@ -46,3 +46,18 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 .css-label{
     background-image:url("images/dark-check-green.png");
 }
+#infoArticle {
+    position: absolute;
+    top:50px;
+    left: 150px;
+    bottom: 50px;
+    right: 150px;
+    background: white;
+    border: 2px solid #71b00c;
+    border-radius: 6px;
+    min-width:720px;
+}
+#infoArticle article {
+    margin:15px;
+    min-width:700px;
+}

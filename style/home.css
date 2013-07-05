@@ -11,12 +11,13 @@ body {
     overflow-x: hidden;
     width:100%;
     height: 100%;
+    background: #f4f4f4;
 }
 /* Stile dell'header */
 header, footer {
     width: 100%;
     min-width:770px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
-    background-color: #EEE;
+    background-color: #e8e8e8;
     display:block;
 }
 
@@ -34,6 +35,7 @@ header nav {
 
 #logo {
     float:left;
+    margin:8px 0 0 10px;
 }
 
 #welcomeMessage {
