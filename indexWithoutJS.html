@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <title>Gruppo Stark | City Notifier</title>
-    <script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js" type="text/javascript"></script>
-    <script src="lib/jquery-ui-1.10.3/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
-    <script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/jquery-ui-1.10.3.custom.min.css"/>
-    <link rel="stylesheet" type="text/css" href="style/style.css"/>
-    <link rel="stylesheet" type="text/css" href="style/home.css"/>
-    <link rel="stylesheet" type="text/css" href="style/notification.css"/>
-    <link rel="stylesheet" type="text/css" href="style/tableStyle.css"/>
+<meta charset="UTF-8" />
+<title>Gruppo Stark | City Notifier</title>
+<script src="lib/jquery-ui-1.10.3/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="lib/jquery-ui-1.10.3/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="lib/DataTables-1.9.4/media/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="js/effects.js" type="text/javascript"></script>
+<script src="js/listeners.js" type="text/javascript"></script>
+<script src="js/loaderDesktop.js" type="text/javascript"></script>
+<script src="js/requestHandler.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style/jquery-ui-1.10.3.custom.min.css"/>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<link rel="stylesheet" type="text/css" href="style/home.css"/>
+<link rel="stylesheet" type="text/css" href="style/notification.css"/>
+<link rel="stylesheet" type="text/css" href="style/tableStyle.css"/>
 </head>
 <body>
 <header>
     <!-- Menu -->
     <nav>
         <div id="logo">
-            <a href="index.html" title="Vai alla Homepage"><img src="#" width="120" height="50" alt="CityNotifier"/></a>
+            <a href="index.html" title="Vai alla Homepage"><img src=style/images/logo.png alt="CityNotifier"/></a>
         </div>
         <div id="menu">
             <ul>
@@ -41,9 +45,6 @@
                     </div>
                     <!-- fine div di login -->
                 </li>
-                <li id="refresh">
-                    <a href="#" title="Aggiorna la Mappa" id="refreshShow"><div class="main_nav_label">Aggiorna</div></a>
-                </li>
                 <li id="search">
                     <a href="#" title="Cerca Situazioni" id="searchShow"><div class="main_nav_label">Cerca</div></a>
                 </li>
@@ -54,7 +55,7 @@
                     <a href=# title="Visualizza la lista degli eventi attivi nel raggio selezionato" id="listShow"><div class="main_nav_label">Lista </div></a>
                 </li>
                 <li id="infoPage">
-                    <a href="info.html" title="Informazioni sul progetto" id="infoPageOpener"><div class="main_nav_label">Informazioni</div></a>
+                    <a href="info.html" title="Informazioni sul progetto" id="infoPageOpener"><div class="main_nav_label">Info</div></a>
                 </li>
                 <li id="notification">
                     <a href="#" title="Visualizza Centro Notifiche" id="notificationOpener"><div class="main_nav_label">Notifiche</div></a>
@@ -75,16 +76,16 @@
     <!-- Centro notifiche-->
     <section id="notificationCenterContainer">
         <div id="notificationCenterTitle">
-            <h1>Centro Notifiche</h1>
+            <h1>Ultimi Eventi</h1>
         </div>
         <ul>
             <li class="notification">
-                <span id="type" title="Tipo"></span>
-                <span id="notificationStatus" title="Stato"></span>
-                <span id="nroNotific" title="Numero Notifiche"></span>
-                <span id="reliability" title="Affidabilit&agrave;"></span>
-                <span id="creationDate" title="Data Creazione"></span>
-                <span id="freshness" title="Freschezza"></span>
+                <span class="type" title="Tipo">Incidente</span>
+                <span class="notificationStatus" title="Stato">aperto</span>
+                <span class="nroNotific" title="Numero Notifiche">2</span>
+                <span class="reliability" title="Affidabilit&agrave;">0.8</span>
+                <span class="creationDate" title="Data Creazione">14/10/1203</span>
+                <span class="freshness" title="Freschezza">2 giorni</span>
             </li>
         </ul>
     </section>
@@ -97,7 +98,7 @@
     </nav>
 </footer>
 <!-- Dialog di ricerca di un elemento -->
-<div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+<div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
     <!-- Search Form -->
     <form name="search" method="get" id="search_module">
         <div id="searchType">
@@ -115,12 +116,20 @@
             </div>
         </div>
         <label for="radius">Raggio</label>
-        <input type="text" id="radius" placeholder="Raggio (km)">
+        <div id="radiusForm">
+            <input type="text" id="radius" placeholder="Raggio (km)">
+            <div id="slider-range-min"></div>
+        </div>
         <div id="datePickForm">
             <label for="dateStart">Dal</label>
             <input id="dateStart" class="date">
             <label for="dateEnd">al</label>
             <input id="dateEnd" class="date">
+        </div>
+        <div id="radioStatus">
+            <input type="radio" id="radioOpen" name="radio" /><label for="radioOpen">Open</label>
+            <input type="radio" id="radioClosed" name="radio" checked="checked" /><label for="radioClosed">Closed</label>
+            <input type="radio" id="radioSkeptical" name="radio" /><label for="radioSkeptical">Skeptical</label>
         </div>
         <div id="remoteSearchContainer">
             <label for="remoteSearch">Ottieni risultati anche dagli altri server</label>
@@ -134,7 +143,7 @@
     <!-- Search Form End -->
 </div>
 <!-- Form di inserimento di un evento -->
-<div id="effectReports" title="Inserisci un nuovo Evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+<div id="effectReports" title="Inserisci un nuovo Evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
     <!-- Report Form -->
     <form name="report" method="post" id="report_module">
         <label for="ReporType">Tipologia</label>
@@ -149,19 +158,38 @@
     <!-- Report Form End -->
 </div>
 <!-- Lista degli eventi presenti ad un determinato raggio -->
-<div id="effectList" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
+<div id="effectList" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
     <table id="eventListTable" class="bordered">
         <thead>
         <tr>
             <th>Tipo > Sottotipo</th>
             <th>Stato</th>
             <th>Affidabilit&agrave; (&#37;)</th>
-            <th>N.ro Notifice</th>
+            <th>N.ro Notifiche</th>
             <th>Creata il</th>
             <th>Ultima Segnalazione</th>
+            <th>ID segnalazione</th>
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
         </tbody>
     </table>
 </div>
