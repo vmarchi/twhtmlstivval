@@ -209,7 +209,7 @@
     <!-- Menu -->
     <nav>
         <div id="logo">
-            <a href="index.html" title="Vai alla Homepage"><img src=style/images/logo.png alt="CityNotifier"/></a>
+            <a href="index.html" title="Vai alla Homepage"><img src="#" width="120" height="50" alt="CityNotifier"/></a>
         </div>
         <div id="menu">
             <ul>
@@ -232,6 +232,9 @@
                         </div>
                     </div>
                     <!-- fine div di login -->
+                </li>
+                <li id="refresh">
+                    <a href="#" title="Aggiorna la Mappa" id="refreshShow"><div class="main_nav_label">Aggiorna</div></a>
                 </li>
                 <li id="search">
                     <a href="#" title="Cerca Situazioni" id="searchShow"><div class="main_nav_label">Cerca</div></a>
@@ -264,16 +267,16 @@
     <!-- Centro notifiche-->
     <section id="notificationCenterContainer">
         <div id="notificationCenterTitle">
-            <h1>Ultimi Eventi</h1>
+            <h1>Centro Notifiche</h1>
         </div>
         <ul>
             <li class="notification">
-                <span class="type" title="Tipo">Incidente</span>
-                <span class="notificationStatus" title="Stato">aperto</span>
-                <span class="nroNotific" title="Numero Notifiche">2</span>
-                <span class="reliability" title="Affidabilit&agrave;">0.8</span>
-                <span class="creationDate" title="Data Creazione">14/10/1203</span>
-                <span class="freshness" title="Freschezza">2 giorni</span>
+                <span id="type" title="Tipo"></span>
+                <span id="notificationStatus" title="Stato"></span>
+                <span id="nroNotific" title="Numero Notifiche"></span>
+                <span id="reliability" title="Affidabilit&agrave;"></span>
+                <span id="creationDate" title="Data Creazione"></span>
+                <span id="freshness" title="Freschezza"></span>
             </li>
         </ul>
     </section>
@@ -286,24 +289,12 @@
     </nav>
 </footer>
 <!-- Dialog di ricerca di un elemento -->
-<div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
+<div id="effectSearch" title="Ricerca di un evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
     <!-- Search Form -->
     <form name="search" method="get" id="search_module">
         <div id="searchType">
-            <h3>Title</h3>
-            <div>
-                <label id="subtypesLabels">Sottotipi</label>
-                <div id="SearchSubtypes">
-                    <input id="incidente" class="css-checkbox subtype" type="checkbox" />
-                    <label for="incidente" class="css-label">Incidente</label>
-                    <input id="coda" class="css-checkbox subtype" type="checkbox" />
-                    <label for="coda" class="css-label">Coda</label>
-                    <input id="buca" class="css-checkbox subtype" type="checkbox" />
-                    <label for="buca" class="css-label">Buca</label>
-                </div>
-            </div>
+
         </div>
-        <label for="radius">Raggio</label>
         <div id="radiusForm">
             <input type="text" id="radius" placeholder="Raggio (km)">
             <div id="slider-range-min"></div>
@@ -313,11 +304,13 @@
             <input id="dateStart" class="date">
             <label for="dateEnd">al</label>
             <input id="dateEnd" class="date">
+            <button id="setToNow" title="Seleziona, oppure riporta, la data ad oggi">Oggi</button>
         </div>
         <div id="radioStatus">
-            <input type="radio" id="radioOpen" name="radio" /><label for="radioOpen">Open</label>
-            <input type="radio" id="radioClosed" name="radio" checked="checked" /><label for="radioClosed">Closed</label>
-            <input type="radio" id="radioSkeptical" name="radio" /><label for="radioSkeptical">Skeptical</label>
+            <input type="radio" id="radioAll" name="radioStatus" checked="checked" /><label for="radioAll">All</label>
+            <input type="radio" id="radioOpen" name="radioStatus" /><label for="radioOpen">Open</label>
+            <input type="radio" id="radioClosed" name="radioStatus" /><label for="radioClosed">Closed</label>
+            <input type="radio" id="radioSkeptical" name="radioStatus" /><label for="radioSkeptical">Skeptical</label>
         </div>
         <div id="remoteSearchContainer">
             <label for="remoteSearch">Ottieni risultati anche dagli altri server</label>
@@ -331,7 +324,7 @@
     <!-- Search Form End -->
 </div>
 <!-- Form di inserimento di un evento -->
-<div id="effectReports" title="Inserisci un nuovo Evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
+<div id="effectReports" title="Inserisci un nuovo Evento" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
     <!-- Report Form -->
     <form name="report" method="post" id="report_module">
         <label for="ReporType">Tipologia</label>
@@ -346,40 +339,26 @@
     <!-- Report Form End -->
 </div>
 <!-- Lista degli eventi presenti ad un determinato raggio -->
-<div id="effectList" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable">
+<div id="effectList" title="Lista degli Eventi" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable">
     <table id="eventListTable" class="bordered">
         <thead>
         <tr>
+            <th>N.ro</th>
             <th>Tipo > Sottotipo</th>
             <th>Stato</th>
             <th>Affidabilit&agrave; (&#37;)</th>
             <th>N.ro Notifiche</th>
             <th>Creata il</th>
             <th>Ultima Segnalazione</th>
-            <th>ID segnalazione</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
         </tbody>
     </table>
 </div>
+<!-- gestore richieste ajax -->
+<script src="js_c/requestHandler.js"> </script>
+<!-- controller -->
+<script src="js_c/loaderDesktop.js"> </script>
 </body>
 </html>
