@@ -214,7 +214,7 @@ header nav li a
 
 /* Nuova Segnalazione */
 #report a {
-    background: url("images/pin.svg") center no-repeat;
+    background: url("images/segnala.svg") center no-repeat;
 }
 
 /* Event List */
