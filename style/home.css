@@ -43,7 +43,7 @@ header nav {
 }
 
 #welcomeMessage {
-    height: 30px;
+    height: 100%;
 }
 /* Per poter centrare il div in altezza occorre incapsularlo in un altro div e centrare quest'ultimo rispetto a suo padre */
 #welcomeMessage div {
