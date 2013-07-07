@@ -43,7 +43,7 @@ header nav {
 }
 
 #welcomeMessage {
-    height: 37px;
+    height: 100%;
 }
 /* Per poter centrare il div in altezza occorre incapsularlo in un altro div e centrare quest'ultimo rispetto a suo padre */
 #welcomeMessage div {
@@ -219,23 +219,23 @@ header nav div.main_nav_label {
 
 /* Event List */
 #eventList {
-    background: url("images/list.png") center 4px no-repeat;
+    background: url("images/list.png") center 2px no-repeat;
 }
 
 /* Pagina delle informazioni */
 #infoPage {
-    background: url("images/info.png") center 4px no-repeat;
+    background: url("images/info.png") center 2px no-repeat;
 
 }
 
 /* Centro Notifiche */
 #notification {
-    background: url("images/notifiche.png") center 4px no-repeat;
+    background: url("images/notifiche.png") center 2px no-repeat;
 }
 
 /* Home Button */
 #home {
-    background:url("images/home.png") center 4px no-repeat;
+    background:url("images/home.png") center 2px no-repeat;
 }
 /* End Menu Icons*/
 
