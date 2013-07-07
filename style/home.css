@@ -26,7 +26,7 @@ header, footer {
 
 header {
     position: absolute;
-    height: 55px;
+    height: 30px;
     top: 0;
     border-bottom: 2px solid #71b00c;
 }
@@ -42,7 +42,7 @@ header nav {
 }
 
 #welcomeMessage {
-    height: 55px;
+    height: 30px;
 }
 /* Per poter centrare il div in altezza occorre incapsularlo in un altro div e centrare quest'ultimo rispetto a suo padre */
 #welcomeMessage div {
@@ -60,7 +60,7 @@ header nav {
 /*Stile del footer */
 footer {
     position: fixed;
-    height: 37px;
+    height: 25px;
     bottom:0;
     text-align: center;
     border-top: 2px solid #71b00c;
@@ -74,7 +74,7 @@ footer a
 footer nav div{
     position:relative;
     top:50%;
-    margin-top: 11px;
+    margin-top: 6px;
     width:100%;
 }
 
@@ -86,8 +86,8 @@ a:visited
 
 #content {
     position:absolute;
-    top:55px;
-    bottom:37px;
+    top:30px;
+    bottom:27px;
     width: 100%;
 }
 /* Regole che permettono il corretto posizionamento della mappa */
@@ -109,7 +109,7 @@ nav ul form {
 
 /* Stile dei un generico form */
 li div.toggler {
-    margin-top: 14px;
+    margin-top: 2px;
 }
 
 .ui-widget-content {
@@ -146,51 +146,44 @@ button span {
 #menu {
     float:right;
     clear:right;
-    margin-right: 5px;
+    margin-right: 15%;
 }
 
 header ul {
     padding: 0;
     margin: 0;
+    height:30px;
 }
 
 header ul li {
     position: relative;
     float: left;
     list-style-type: none;
-    height: 55px;
+    height: 100%;
     margin-right:4px;
 }
 
 header nav li a {
     color: #e5e5e5;
     text-decoration: none;
-}
-
-header nav div.main_nav_label {
-    font-size: 12px;
-    color: #222;
-    position: absolute;
-    left: 0;
-    font-weight: 300;
-    /* background: url("images/tip.png") left bottom no-repeat; */
-    top:40px;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-}
-
-header nav li a
-{
+    height:100%;
     min-width: 60px;
-    height: 40px;   /*TODO*/
     font-size: 1.5em;
     display: inline-block;
     outline: 0;
     text-decoration: none;
-    color: #FFF;
     position: relative;
-    margin: 0 1px;
+}
+
+header nav div.main_nav_label {
+    position:absolute;
+    bottom:0;
+    font-size: 12px;
+    color: #222;
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
 }
 
 /* Menu Buttons */
@@ -203,38 +196,38 @@ header nav li a
 }
 /* Icone e relativi effetti */
 /* Login */
-#login a {
+#login {
     background: url("images/user.svg") center no-repeat;
 }
 
 /* Ricerca */
-#search a {
+#search {
     background: url("images/magnifying_glass.svg") center no-repeat;
 }
 
 /* Nuova Segnalazione */
-#report a {
+#report {
     background: url("images/segnala.svg") center no-repeat;
 }
 
 /* Event List */
-#eventList a {
+#eventList {
     background: url("images/list.svg") center no-repeat;
 }
 
 /* Pagina delle informazioni */
-#infoPage a {
+#infoPage {
     background: url("images/info.svg") center no-repeat;
 
 }
 
 /* Centro Notifiche */
-#notification a {
+#notification {
     background: url("images/notifiche.svg") center no-repeat;
 }
 
 /* Home Button */
-#home a{
+#home {
     background:url("images/home.svg") center no-repeat;
 }
 /* End Menu Icons*/
