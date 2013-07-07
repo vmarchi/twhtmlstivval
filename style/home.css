@@ -26,7 +26,7 @@ header, footer {
 
 header {
     position: absolute;
-    height: 35px;
+    height: 37px;
     top: 0;
     border-bottom: 2px solid #71b00c;
 }
@@ -87,7 +87,7 @@ a:visited
 
 #content {
     position:absolute;
-    top:30px;
+    top:37px;
     bottom:27px;
     width: 100%;
 }
@@ -199,22 +199,22 @@ header nav div.main_nav_label {
 /* Icone e relativi effetti */
 /* Login */
 #login {
-    background: url("images/user.png") center 2px no-repeat;
+    background: url("images/user.png") center 4px no-repeat;
 }
 
 /* Aggiorna */
 #refresh{
-    background: url("images/aggiorna.png") center 2px no-repeat;
+    background: url("images/aggiorna.png") center 4px no-repeat;
 }
 
 /* Ricerca */
 #search {
-    background: url("images/cerca.png") center 2px no-repeat;
+    background: url("images/cerca.png") center 4px no-repeat;
 }
 
 /* Nuova Segnalazione */
 #report {
-    background: url("images/segnala.png") center 2px no-repeat;
+    background: url("images/segnala.png") center 4px no-repeat;
 }
 
 /* Event List */
