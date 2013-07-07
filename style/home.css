@@ -202,6 +202,11 @@ header nav div.main_nav_label {
     background: url("images/user.png") center 2px no-repeat;
 }
 
+/* Aggiorna */
+#refresh{
+    background: url("images/aggiorna.png") center no-repeat;
+}
+
 /* Ricerca */
 #search {
     background: url("images/cerca.png") center 2px no-repeat;
