@@ -344,8 +344,9 @@ div[aria-describedby="effectSearch"] {
 #effectSearch {
     min-width: 450px;
 }
-#SearchSubtypes label {
 
+#effectSearch div {
+    margin-top:10px;
 }
 /* List Widget */
 div[aria-labelledby="ui-id-2"] {
