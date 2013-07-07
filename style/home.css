@@ -26,7 +26,7 @@ header, footer {
 
 header {
     position: absolute;
-    height: 30px;
+    height: 35px;
     top: 0;
     border-bottom: 2px solid #71b00c;
 }
@@ -34,6 +34,7 @@ header {
 header nav {
     display: inline-block;
     width:100%;
+    height:100%;
 }
 
 #logo {
@@ -147,12 +148,13 @@ button span {
     float:right;
     clear:right;
     margin-right: 15%;
+    height:100%;
 }
 
 header ul {
     padding: 0;
     margin: 0;
-    height:30px;
+    height:100%;
 }
 
 header ul li {
@@ -197,38 +199,38 @@ header nav div.main_nav_label {
 /* Icone e relativi effetti */
 /* Login */
 #login {
-    background: url("images/user.png") center no-repeat;
+    background: url("images/user.png") center 2px no-repeat;
 }
 
 /* Ricerca */
 #search {
-    background: url("images/cerca.png") center no-repeat;
+    background: url("images/cerca.png") center 2px no-repeat;
 }
 
 /* Nuova Segnalazione */
 #report {
-    background: url("images/segnala.png") center no-repeat;
+    background: url("images/segnala.png") center 2px no-repeat;
 }
 
 /* Event List */
 #eventList {
-    background: url("images/list.png") center no-repeat;
+    background: url("images/list.png") center 2px no-repeat;
 }
 
 /* Pagina delle informazioni */
 #infoPage {
-    background: url("images/info.png") center no-repeat;
+    background: url("images/info.png") center 2px no-repeat;
 
 }
 
 /* Centro Notifiche */
 #notification {
-    background: url("images/notifiche.png") center no-repeat;
+    background: url("images/notifiche.png") center 2px no-repeat;
 }
 
 /* Home Button */
 #home {
-    background:url("images/home.png") center no-repeat;
+    background:url("images/home.png") center 2px no-repeat;
 }
 /* End Menu Icons*/
 
