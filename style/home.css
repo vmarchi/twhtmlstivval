@@ -197,38 +197,38 @@ header nav div.main_nav_label {
 /* Icone e relativi effetti */
 /* Login */
 #login {
-    background: url("images/user.svg") center no-repeat;
+    background: url("images/user.png") center no-repeat;
 }
 
 /* Ricerca */
 #search {
-    background: url("images/magnifying_glass.svg") center no-repeat;
+    background: url("images/cerca.png") center no-repeat;
 }
 
 /* Nuova Segnalazione */
 #report {
-    background: url("images/segnala.svg") center no-repeat;
+    background: url("images/segnala.png") center no-repeat;
 }
 
 /* Event List */
 #eventList {
-    background: url("images/list.svg") center no-repeat;
+    background: url("images/list.png") center no-repeat;
 }
 
 /* Pagina delle informazioni */
 #infoPage {
-    background: url("images/info.svg") center no-repeat;
+    background: url("images/info.png") center no-repeat;
 
 }
 
 /* Centro Notifiche */
 #notification {
-    background: url("images/notifiche.svg") center no-repeat;
+    background: url("images/notifiche.png") center no-repeat;
 }
 
 /* Home Button */
 #home {
-    background:url("images/home.svg") center no-repeat;
+    background:url("images/home.png") center no-repeat;
 }
 /* End Menu Icons*/
 
