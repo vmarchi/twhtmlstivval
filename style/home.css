@@ -219,23 +219,23 @@ header nav div.main_nav_label {
 
 /* Event List */
 #eventList {
-    background: url("images/list.png") center 2px no-repeat;
+    background: url("images/list.png") center 4px no-repeat;
 }
 
 /* Pagina delle informazioni */
 #infoPage {
-    background: url("images/info.png") center 2px no-repeat;
+    background: url("images/info.png") center 4px no-repeat;
 
 }
 
 /* Centro Notifiche */
 #notification {
-    background: url("images/notifiche.png") center 2px no-repeat;
+    background: url("images/notifiche.png") center 4px no-repeat;
 }
 
 /* Home Button */
 #home {
-    background:url("images/home.png") center 2px no-repeat;
+    background:url("images/home.png") center 4px no-repeat;
 }
 /* End Menu Icons*/
 
@@ -267,7 +267,7 @@ form#search {
 }
 
 #datePickForm label, #datePickForm input, #remoteSearchContainer input, #remoteSearchContainer label,
-#radiusForm div, #radiusForm input, #radiusForm label {
+#radiusForm div, #radiusForm input, #radiusForm label, #radioStatus input, #radioStatus label{
     display:inline-block;
     text-align: center;
 }
@@ -307,11 +307,8 @@ input[type=text] {
 
 #radioStatus input {
     width: 30px;
-    float:left;
-    clear:left;
 }
 #radioStatus label {
-    display:block;
     margin-right:15px;
     clear:right;
 }
