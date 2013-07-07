@@ -204,7 +204,7 @@ header nav div.main_nav_label {
 
 /* Aggiorna */
 #refresh{
-    background: url("images/aggiorna.png") center no-repeat;
+    background: url("images/aggiorna.png") center 2px no-repeat;
 }
 
 /* Ricerca */
