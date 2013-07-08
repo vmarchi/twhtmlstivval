@@ -38,7 +38,7 @@ header nav {
 
 #logo {
     float:left;
-    margin:8px 0 0 10px;
+    margin:2px 0 0 10px;
 }
 
 #welcomeMessage {
@@ -181,6 +181,15 @@ header nav div.main_nav_label {
     width: 100%;
 }
 
+/* Generic input properties */
+select {
+    width: 150px;
+}
+
+input[type=text] {
+    width:150px;
+}
+
 /* Menu Buttons */
 #menu li:hover {
     background-color: #71b00c;
@@ -189,6 +198,7 @@ header nav div.main_nav_label {
 #menu li:active {
     background-color: white;
 }
+
 /* Icone e relativi effetti */
 /* Login */
 #login {
@@ -253,7 +263,16 @@ header nav div.main_nav_label {
     background-size: 27px 27px;
 }
 
-/* Form di ricerca */
+/* Search Widget */
+div[aria-describedby="effectSearch"] {
+    min-width: 460px;
+    min-height: 500px;
+}
+
+#effectSearch div {
+    margin-top:10px;
+}
+
 form#search {
     width: 57%;
     margin: 0 auto;
@@ -273,6 +292,10 @@ form#search {
     width:50px;
 }
 
+.ui-slider-range {
+    margin-top:0;
+}
+
 #remoteSearch {
     width: 15px;
 }
@@ -280,14 +303,6 @@ form#search {
 #searchType {
     width: 400px;
     margin:0 auto;
-}
-
-select {
-    width: 150px;
-}
-
-input[type=text] {
-    width:150px;
 }
 
 .infoWindowTitle {
@@ -301,23 +316,28 @@ input[type=text] {
 #radioStatus input {
     width: 30px;
 }
+
 #radioStatus label {
     margin-right:15px;
     clear:right;
 }
+
 /* Reports Widget */
 div[aria-describedby="effectReports"] {
     min-width: 400px;
     min-height: 300px;
 }
+
 #effectReports {
     min-width: 400px;
 }
+
 #description {
     width: 300px;
     height: 80px;
     resize: none;
 }
+
 #description:focus {
     border-color: #71b00c;
     outline-color:#71b00c;
@@ -325,24 +345,12 @@ div[aria-describedby="effectReports"] {
     box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(113, 176, 12, 0.60);
 }
 
-/* Search Widget */
-div[aria-describedby="effectSearch"] {
-    min-width: 460px;
-    min-height: 500px;
-}
-
-#effectSearch {
-    min-width: 450px;
-}
-
-#effectSearch div {
-    margin-top:10px;
-}
 /* List Widget */
 div[aria-labelledby="ui-id-2"] {
     min-width: 900px;
     min-height: 500px;
 }
+
 /* loggedUser */
 #loggedUser {
     font-weight: bold;
@@ -357,7 +365,6 @@ div[aria-labelledby="ui-id-2"] {
 }
 
 .disabled {
-    /* TODO: not W3C compliant! */
     -webkit-opacity: 0.2;
     -moz-opacity: 0.2;
     -khtml-opacity:.20;
@@ -366,12 +373,12 @@ div[aria-labelledby="ui-id-2"] {
     opacity:.20;
 }
 
-/* logged */
+/* username properties in welcomeBox */
 #user {
     font-weight: bold;
 }
 
-/* Stile della lista di eventi */
+/* EventList style */
 #effectList * {
     margin: 10px auto;
 }

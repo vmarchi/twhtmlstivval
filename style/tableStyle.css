@@ -1,4 +1,4 @@
-/* Stile delle tabelle */
+/* Table Style */
 table
 {
     width:95%;
@@ -55,7 +55,7 @@ tr:nth-child(odd)
 }
 tr:nth-child(even)
 {
-    background-color:#ffffff;
+    background-color:#fff;
 }
 td
 {
@@ -63,14 +63,14 @@ td
     padding:7px;
     font-size:13px;
     font-weight:normal;
-    color:#000000;
+    color:#000;
 }
 tr:first-child td
 {
     background-color: #83b54b;
     text-align:center;
     font-size:14px;;
-    color:#ffffff;
+    color:#fff;
 }
 tr:first-child:hover td
 {
@@ -130,7 +130,7 @@ th:only-child{
 {
     text-decoration: none;
     border: 1px solid #d3d3d3;
-    background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+    background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
     font-weight: normal;
     color: #555;
     padding: 2px 6px 2px 6px;
