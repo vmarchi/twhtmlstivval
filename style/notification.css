@@ -57,7 +57,7 @@ li.notification {
 }
 
 .reliability::before {
-    content:"Affidabilità: ";
+    content:"Affidabilit&agrave;: ";
 }
 
 .creationDate {

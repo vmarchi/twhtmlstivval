@@ -80,6 +80,7 @@ a:visited
 }
 
 #content {
+    display:block;
     position:absolute;
     top:37px;
     bottom:27px;
@@ -120,12 +121,12 @@ div form input, div form select, div form textarea {
     min-height: 26px;
 }
 
+/* Generic button style */
 form button {
     margin: 10px 0;
     display: inline-block;
 }
 
-/* Stile dei bottoni */
 button span {
     font-size: 13px;
 }
@@ -134,9 +135,12 @@ button span {
     display: inline-table;
 }
 
-/*
- * Stile del menu
- */
+#button {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+/* Menu style */
 #menu {
     float:right;
     clear:right;
@@ -242,7 +246,15 @@ input[type=text] {
 }
 /* End Menu Icons*/
 
-/* Form di Login*/
+/* Widget Style */
+#effectLogin,#effectReports {
+    position: relative;
+    width: 240px;
+    height: 100%;
+    padding: 0.4em;
+}
+
+/* Login Widget*/
 #login {
     z-index:3;
 }
@@ -264,6 +276,11 @@ input[type=text] {
 }
 
 /* Search Widget */
+#effectSearch {
+    min-height: 312px !important; /*!important in questo caso mi serve a sovrascrivere quanto specificato da jquery ui */
+    min-width: 400px;
+}
+
 div[aria-describedby="effectSearch"] {
     min-width: 460px;
     min-height: 500px;
@@ -272,6 +289,7 @@ div[aria-describedby="effectSearch"] {
 #effectSearch div {
     margin-top:10px;
 }
+
 
 form#search {
     width: 57%;
@@ -329,7 +347,8 @@ div[aria-describedby="effectReports"] {
 }
 
 #effectReports {
-    min-width: 400px;
+    min-width: 390px;
+    min-height: 340px !important;
 }
 
 #description {
@@ -379,6 +398,11 @@ div[aria-labelledby="ui-id-2"] {
 }
 
 /* EventList style */
+#effectList
+{
+    min-width: 850px;
+    min-height: 400px !important;
+}
 #effectList * {
     margin: 10px auto;
 }
@@ -387,4 +411,20 @@ select[name="eventListTable_length"]{
 }
 div.paging_two_button a {
     margin:10px 10px !important;
+}
+
+/* Article Style */
+#infoArticle {
+    position: relative;
+    top:55px;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #71b00c;
+    border-radius: 6px;
+    min-width:720px;
+    width: 80%;
+}
+#infoArticle article {
+    margin:15px;
+    min-width:700px;
 }
