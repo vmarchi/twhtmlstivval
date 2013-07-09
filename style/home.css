@@ -309,7 +309,7 @@ form#search {
     width:50px;
 }
 
-#ui-slider-range {
+.ui-slider {
     margin-top:0;
 }
 
@@ -364,7 +364,7 @@ div[aria-describedby="effectReports"] {
 }
 
 /* List Widget */
-div[aria-labelledby="ui-id-2"] {
+div[aria-labelledby="ui-id-3"] {
     min-width: 900px;
     min-height: 500px;
 }
