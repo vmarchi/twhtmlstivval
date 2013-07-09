@@ -25,7 +25,7 @@ header, footer {
 
 header {
     position: absolute;
-    height: 37px;
+    height: 39px;
     top: 0;
     border-bottom: 2px solid #71b00c;
 }
@@ -45,7 +45,7 @@ header nav {
     position: relative;
     float: right;
     top: 50%;
-    margin-top: -8px;
+    margin-top: -9px;
     margin-right: 30px;
 }
 #welcomeMessage p{
@@ -82,15 +82,14 @@ a:visited
 #content {
     display:block;
     position:absolute;
-    top:37px;
-    bottom:27px;
+    top:39px;
+    bottom:25px;
     width: 100%;
 }
 /* Regole che permettono il corretto posizionamento della mappa */
 #map-canvas
 {
     position:absolute;
-    top: 2px;
     width:100%;
     height:100%;
 }
@@ -428,7 +427,7 @@ div.paging_two_button a {
     margin:15px;
     min-width:700px;
 }
-
-div[role="dialog"], div.toggler, section#notificationCenterContainer {
+/* Hide element that must be hidden on page load */
+#effectSearch, #effectLogin, #effectReports, #notificationCenterContainer, #effectList {
     visibility: hidden;
 }
