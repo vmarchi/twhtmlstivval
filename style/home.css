@@ -286,7 +286,7 @@ div[aria-describedby="effectSearch"] {
     min-height: 500px;
 }
 
-#effectSearch div {
+#effectSearch div:not(.ui-slider-range) {
     margin-top:10px;
 }
 
@@ -332,11 +332,6 @@ form#search {
 
 #radioStatus input {
     width: 30px;
-}
-
-#radioStatus label {
-    margin-right:15px;
-    clear:right;
 }
 
 /* Reports Widget */
