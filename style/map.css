@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* CSS Document */
+#map-canvas {
+    width: 100%;
+    /*height: 92.5%;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
