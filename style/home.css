@@ -18,7 +18,7 @@ form * {
 /* Stile dell'header */
 header, footer {
     width: 100%;
-    min-width:900px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
+    min-width:1070px; /* Ci vuole altrimenti il restringimento della pagina sotto min-width, fa disporre gli elementi in colonna */
     background-color: #e8e8e8;
     display:block;
 }
