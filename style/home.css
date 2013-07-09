@@ -428,3 +428,7 @@ div.paging_two_button a {
     margin:15px;
     min-width:700px;
 }
+
+div[role="dialog"], div.toggler, section#notificationCenterContainer {
+    visibility: hidden;
+}
